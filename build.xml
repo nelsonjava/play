@@ -21,6 +21,7 @@
 
   <target name="del" description="Initialize the build">
     <delete dir="recibos/tmp" failonerror="no"/>
+    <delete dir="simatool/tmp" failonerror="no"/>
   </target>
 
 </project>
