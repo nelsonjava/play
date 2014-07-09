@@ -7,6 +7,8 @@ GET     /                                       Application.index
 GET     /sima                                   Application.sima
 GET     /simacont                               Application.simacont
 GET     /simacart                               Application.simacart
+GET     /maebto                                 Application.maebto
+GET     /recibos                                Application.recibos
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

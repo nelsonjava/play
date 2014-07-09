@@ -1,4 +1,4 @@
-package controllers.com.naif.sima.dbf;
+package controllers.com.naif.sima.dbf.simacart.year.recibos;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ import com.naif.tools.dbffile.DBFFile;
 import com.naif.tools.dbffile.DBFReader;
 import com.naif.tools.dbffile.DBFRecord;
 
-public class Recibos implements java.io.Serializable {
+public class RECIBOS implements java.io.Serializable {
 
    private int nIDECODRFA;
    private String cCODIGOEST;
@@ -75,7 +75,7 @@ public class Recibos implements java.io.Serializable {
    private ArrayList<DBFRecord> registros;
    private DBFRecord registro;
 
-   public Recibos(String sFile) {
+   public RECIBOS(String sFile) {
      dbf = new DBFReader().readDBFFile(sFile);
      registros = dbf.getRecords();
    }
@@ -488,4 +488,4 @@ public class Recibos implements java.io.Serializable {
        } // for
    } // viewRegistros
 
-} // class 
+} // class

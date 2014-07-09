@@ -20,6 +20,9 @@ import  com.naif.tools.dbf.DbfUtils;
 
 import com.naif.tools.filetxt.FileTxt;
 
+import controllers.com.naif.sima.dbf.simacart.year.recibos.RECIBOS;
+import controllers.com.naif.sima.dbf.simacont.year.maeact.MAEBTO;
+
 public class Application extends Controller {
 
     public static void index() {
@@ -46,7 +49,7 @@ public class Application extends Controller {
             System.out.println(PahtSimacont+"/"+fileName+".DAT");
 
             DbfUtils.beanDbfile(PahtSimacont+"/"+fileName+".DAT",               // Archivo a Leer
-                                "com.naif.sima.dbf.simacont.year",              // Paquete
+                                "controllers.com.naif.sima.dbf.simacont.year",  // Paquete
                                 fileName,                                       // Nombre de la Clase
                                 "private",                                      // Visibilidad
                                 "c:/models.com.naif.sima.dbf.simacont.year");   // Directorio Destino
@@ -60,11 +63,11 @@ public class Application extends Controller {
             System.out.println("- " + fileName);
             System.out.println(PahtSimacont+"/"+fileName+".DAT");
 
-            DbfUtils.beanDbfile(PahtSimacont+"/"+fileName+".DAT",                    // Archivo a Leer
-                                "com.naif.sima.dbf.simacont.year.maeact",            // Paquete
-                                fileName,                                            // Nombre de la Clase
-                                "private",                                           // Visibilidad
-                                "c:/models.com.naif.sima.dbf.simacont.year.maeact"); // Directorio Destino
+            DbfUtils.beanDbfile(PahtSimacont+"/"+fileName+".DAT",                     // Archivo a Leer
+                                "controllers.com.naif.sima.dbf.simacont.year.maeact", // Paquete
+                                fileName,                                             // Nombre de la Clase
+                                "private",                                            // Visibilidad
+                                "c:/models.com.naif.sima.dbf.simacont.year.maeact");  // Directorio Destino
         }
         render();
     }  // simacont
@@ -82,11 +85,11 @@ public class Application extends Controller {
             System.out.println("- " + fileName);
             System.out.println(PahtSimacart+"/"+fileName+".DAT");
 
-            DbfUtils.beanDbfile(PahtSimacart+"/"+fileName+".DAT",             // Archivo a Leer
-                                "com.naif.sima.dbf.simacart.year",            // Paquete
-                                fileName,                                     // Nombre de la Clase
-                                "private",                                    // Visibilidad
-                                "c:/models.com.naif.sima.dbf.simacart.year"); // Directorio Destino
+            DbfUtils.beanDbfile(PahtSimacart+"/"+fileName+".DAT",                         // Archivo a Leer
+                                "controllers.com.naif.sima.dbf.simacart.year",            // Paquete
+                                fileName,                                                 // Nombre de la Clase
+                                "private",                                                // Visibilidad
+                                "c:/models.com.naif.sima.dbf.simacart.year");             // Directorio Destino
         }
 
         PahtSimacart = "D:/sima/simacart/2014.diu/recibos/jun";
@@ -98,15 +101,33 @@ public class Application extends Controller {
             System.out.println("- " + fileName);
             System.out.println(PahtSimacart+"/"+fileName+".DAT");
 
-            DbfUtils.beanDbfile(PahtSimacart+"/"+fileName+".DAT",                     // Archivo a Leer
-                                "com.naif.sima.dbf.simacart.year.recibos",            // Paquete
-                                fileName,                                             // Nombre de la Clase
-                                "private",                                            // Visibilidad
-                                "c:/models.com.naif.sima.dbf.simacart.year.recibos"); // Directorio Destino
+            DbfUtils.beanDbfile(PahtSimacart+"/"+fileName+".DAT",                         // Archivo a Leer
+                                "controllers.com.naif.sima.dbf.simacart.year.recibos",    // Paquete
+                                fileName,                                                 // Nombre de la Clase
+                                "private",                                                // Visibilidad
+                                "c:/models.com.naif.sima.dbf.simacart.year.recibos");     // Directorio Destino
         }
         render();
 
 
     }  // simacart
+
+    public static void maebto() {
+
+        String sfile = "D:/sima/simacont/2014.diu/bto/MAEBTO14.DAT";
+        MAEBTO MaeBto = new MAEBTO(sfile);
+        MaeBto.viewRegistros("CCODIGOEST");
+
+        render();
+    }  // maebto
+
+    public static void recibos() {
+
+        String sfile = "D:/sima/simacart/2014.diu/RECIBOS/JUN/RECIJUN.DAT";
+        RECIBOS recibos = new RECIBOS(sfile);
+        recibos.viewRegistros("CCODIGOEST");
+
+        render();
+    }  // recibos
 
 }
