@@ -22,22 +22,22 @@ public class Relationships extends Model {
     
     // Muchos a Uno Unidireccional No.3:Cardinalities
     @ManyToOne
-    Cardinalities cardinalities;
+    public Cardinalities cardinalities;
 
     // Muchos a Uno Unidireccional No.3:PropertiesAttributes
     @ManyToOne
-    PropertiesAttributes propertiesAttributes;
+    public PropertiesAttributes propertiesAttributes;
 
     // Muchos a Uno Unidireccional No.3:Entities
     @ManyToOne
-    Entities from;
+    public Entities from;
 
     // Muchos a Uno Unidireccional No.3:Entities
     @ManyToOne
-    Entities to;
+    public Entities to;
 
     // Muchos a Uno Unidireccional No.3:LinksModels
     @ManyToOne
-    LinksModels linksModels;
+    public LinksModels linksModels;
 
 } // Fin de la clase

@@ -17,15 +17,6 @@ public class Domains extends Model {
     
     // Muchos a Uno Unidireccional No.3:SystemsModels
     @ManyToOne
-    SystemsModels systemsModels;
-
-    // Uno a Muchos Bidireccional No.5:Models
-    @OneToMany
-    private Set<Models> models = new HashSet<Models>(0);
-
-    // Uno a Muchos Bidireccional No.5:LinksModels
-    @OneToMany
-    private Set<LinksModels> linksModels = new HashSet<LinksModels>(0);
-
+    public SystemsModels systemsModels;
 
 } // Fin de la clase

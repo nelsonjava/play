@@ -12,41 +12,41 @@ public class LinksModels extends Model {
     public String link;
     public String observacion;
     public Float orden;
-    
+
     // Muchos a Uno Unidireccional No.3:TiposLinksModels
     @ManyToOne
-    TiposLinksModels tiposLinksModels;
+    public TiposLinksModels tiposLinksModels;
 
     // Muchos a Uno Unidireccional No.3:Models
     @ManyToOne
-    Models models;
+    public Models models;
 
     // Muchos a Uno Unidireccional No.3:Domains
     @ManyToOne
-    Domains domains;
+    public Domains domains;
 
     // Muchos a Uno Unidireccional No.3:SystemsModels
     @ManyToOne
-    SystemsModels systemsModels;
+    public SystemsModels systemsModels;
 
     // Muchos a Uno Unidireccional No.3:Attributes
     @ManyToOne
-    Attributes attributes;
+    public Attributes attributes;
 
     // Muchos a Uno Unidireccional No.3:Relationships
     @ManyToOne
-    Relationships relationships;
+    public Relationships relationships;
 
     // Muchos a Uno Unidireccional No.3:Cardinalities
     @ManyToOne
-    Cardinalities cardinalities;
+    public Cardinalities cardinalities;
 
     // Muchos a Uno Unidireccional No.3:Entities
     @ManyToOne
-    Entities entities;
+    public Entities entities;
 
     // Muchos a Uno Unidireccional No.3:NameQueries
     @ManyToOne
-    NameQueries nameQueries;
+    public NameQueries nameQueries;
 
 } // Fin de la clase

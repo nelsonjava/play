@@ -16,13 +16,5 @@ public class PropertiesAttributes extends Model {
     private String value;
     private String observaciones;
     private Float orden;
-    
-    // Uno a Muchos Bidireccional No.5:Relationships
-    @OneToMany
-    private Set<Relationships> relationships = new HashSet<Relationships>(0);
-
-    // Uno a Muchos Bidireccional No.5:Attributes
-    @OneToMany
-    private Set<Attributes> attributes = new HashSet<Attributes>(0);
 
 } // Fin de la clase

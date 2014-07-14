@@ -14,13 +14,9 @@ public class Cardinalities extends Model {
     private String observaciones;
     private Float orden;
     
-    // Uno a Muchos Bidireccional No.5:Relationships
-    @OneToMany
-    private Set<Relationships> relationships = new HashSet<Relationships>(0);
-
     // Muchos a Uno Unidireccional No.3:LinksModels
     @ManyToOne
-    LinksModels linksModels;
+    public LinksModels linksModels;
 
 
 } // Fin de la clase
