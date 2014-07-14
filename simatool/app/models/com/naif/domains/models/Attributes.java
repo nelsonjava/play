@@ -21,5 +21,29 @@ public class Attributes extends Model {
     public String annotationsMethod;
     public String observaciones;
     public Float orden;
+    
+    // Uno a Muchos Bidireccional No.5:Attributes
+    @OneToMany
+    private Set<Attributes> objHijos = new HashSet<Attributes>(0);
+    
+    // Muchos a Uno Unidireccional No.3:Attributes
+    @ManyToOne
+    Attributes objPadre;
+
+    // Muchos a Uno Unidireccional No.3:Entities
+    @ManyToOne
+    Entities entities;
+
+    // Muchos a Uno Unidireccional No.3:PropertiesAttributes
+    @ManyToOne
+    PropertiesAttributes propertiesAttributes;
+
+    // Muchos a Uno Unidireccional No.3:LinksModels
+    @ManyToOne
+    LinksModels linksModels;
+
+    // Muchos a Uno Unidireccional No.3:TypesAttributes
+    @ManyToOne
+    TypesAttributes typesAttributes;
 
 } // Fin de la clase

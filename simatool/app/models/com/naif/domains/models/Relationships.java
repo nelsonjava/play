@@ -19,5 +19,25 @@ public class Relationships extends Model {
     public String description;
     public String observaciones;
     public Float orden;
+    
+    // Muchos a Uno Unidireccional No.3:Cardinalities
+    @ManyToOne
+    Cardinalities cardinalities;
+
+    // Muchos a Uno Unidireccional No.3:PropertiesAttributes
+    @ManyToOne
+    PropertiesAttributes propertiesAttributes;
+
+    // Muchos a Uno Unidireccional No.3:Entities
+    @ManyToOne
+    Entities from;
+
+    // Muchos a Uno Unidireccional No.3:Entities
+    @ManyToOne
+    Entities to;
+
+    // Muchos a Uno Unidireccional No.3:LinksModels
+    @ManyToOne
+    LinksModels linksModels;
 
 } // Fin de la clase
