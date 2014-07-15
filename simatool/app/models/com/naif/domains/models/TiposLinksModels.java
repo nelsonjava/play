@@ -8,7 +8,11 @@ import play.db.jpa.*;
 @Entity
 public class TiposLinksModels extends Model {
 
-    public String nombre;
+    public String name;
     public Float orden;
+
+    public String toString() {
+        return name;
+    }
 
 } // Fin de la clase

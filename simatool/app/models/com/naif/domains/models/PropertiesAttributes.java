@@ -16,5 +16,9 @@ public class PropertiesAttributes extends Model {
     private String value;
     private String observaciones;
     private Float orden;
+    
+    public String toString() {
+        return name;
+    }    
 
 } // Fin de la clase

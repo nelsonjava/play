@@ -28,4 +28,8 @@ public class Entities extends Model {
     @ManyToOne
     public Models models;
 
+    public String toString() {
+        return name;
+    }
+
 } // Fin de la clase

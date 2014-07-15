@@ -18,5 +18,9 @@ public class Domains extends Model {
     // Muchos a Uno Unidireccional No.3:SystemsModels
     @ManyToOne
     public SystemsModels systemsModels;
+    
+    public String toString() {
+        return name;
+    }    
 
 } // Fin de la clase

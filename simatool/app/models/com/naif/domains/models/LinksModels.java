@@ -49,4 +49,8 @@ public class LinksModels extends Model {
     @ManyToOne
     public NameQueries nameQueries;
 
+    public String toString() {
+        return titulo;
+    }
+
 } // Fin de la clase

@@ -41,5 +41,9 @@ public class Attributes extends Model {
     // Muchos a Uno Unidireccional No.3:TypesAttributes
     @ManyToOne
     public TypesAttributes typesAttributes;
+    
+    public String toString() {
+        return name;
+    }
 
 } // Fin de la clase

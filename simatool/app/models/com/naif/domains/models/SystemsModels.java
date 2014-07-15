@@ -11,5 +11,9 @@ public class SystemsModels extends Model {
     public Float orden;
     public String name;
     public String observaciones;
+    
+    public String toString() {
+        return name;
+    }
 
 } // Fin de la clase

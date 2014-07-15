@@ -16,6 +16,10 @@ public class NameQueries extends Model {
     // Muchos a Uno Unidireccional No.3:Entities
     @ManyToOne
     public Entities entities;
+    
+    public String toString() {
+        return name;
+    }    
 
 
 } // Fin de la clase

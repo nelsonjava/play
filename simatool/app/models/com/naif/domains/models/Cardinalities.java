@@ -17,6 +17,10 @@ public class Cardinalities extends Model {
     // Muchos a Uno Unidireccional No.3:LinksModels
     @ManyToOne
     public LinksModels linksModels;
+    
+    public String toString() {
+        return name;
+    }    
 
 
 } // Fin de la clase

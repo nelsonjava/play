@@ -12,4 +12,8 @@ public class TypesAttributes extends Model {
     public String observaciones;
     public Float orden;
 
+    public String toString() {
+        return type;
+    }
+
 } // Fin de la clase
