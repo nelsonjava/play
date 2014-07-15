@@ -26,6 +26,8 @@ import com.naif.tools.filetxt.FileTxt;
 import controllers.com.naif.sima.dbf.simacart.year.recibos.RECIBOS;
 import controllers.com.naif.sima.dbf.simacont.year.maeact.MAEBTO;
 
+import models.com.naif.domains.models.SystemsModels;
+
 public class Application extends Controller {
 
     public static void index() {
@@ -132,5 +134,14 @@ public class Application extends Controller {
 
         render();
     }  // recibos
+
+    public static void list() {
+        List<SystemsModels> systemsModels = SystemsModels.find("order by orden, name").fetch();
+        render(systemsModels);
+    }
+
+    public static void pruebas(SystemsModels systemsModels ) {
+        render(systemsModels);
+    }
 
 }

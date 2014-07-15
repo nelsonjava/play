@@ -9,6 +9,9 @@ GET     /simacont                               Application.simacont
 GET     /simacart                               Application.simacart
 GET     /maebto                                 Application.maebto
 GET     /recibos                                Application.recibos
+GET     /list                                   Application.list
+GET     /systemsModels/{id}                     Application.form
+GET     /pruebas                                Application.pruebas
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

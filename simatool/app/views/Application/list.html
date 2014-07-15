@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'List' /}
+
+<table>
+	<thead>
+	 <tr>
+	   <th class="name">Orden</th>
+	   <th class="firstname">name</th>
+	    <th class="Action"></th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list systemsModels, as:'systems'}
+	    <tr>
+               <td><a href="@{pruebas()}">${systems.orden}</a></td>
+ 	       <td><a href="@{pruebas()}">${systems.name}</a></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+</table>
+
+
