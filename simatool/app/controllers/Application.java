@@ -140,8 +140,13 @@ public class Application extends Controller {
         render(systemsModels);
     }
 
-    public static void pruebas(SystemsModels systemsModels ) {
+    public static void pruebas(Long id ) {
+
+        SystemsModels systemsModels = SystemsModels.findById(id);
+
         render(systemsModels);
     }
+
+
 
 }

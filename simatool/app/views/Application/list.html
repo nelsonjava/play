@@ -13,8 +13,8 @@
 	<tbody>
 	    #{list systemsModels, as:'systems'}
 	    <tr>
-               <td><a href="@{pruebas()}">${systems.orden}</a></td>
- 	       <td><a href="@{pruebas()}">${systems.name}</a></td>
+               <td><a href="@{pruebas(systems.id)}">${systems.orden}</a></td>
+ 	       <td><a href="@{pruebas(systems.id)}">${systems.name}</a></td>
    	    </tr>
 	    #{/list}
 	</tbody>
