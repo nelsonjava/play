@@ -14,7 +14,7 @@ public class Domains extends Model {
     public Date fecha;
     public String description;
     public Float orden;
-    
+
     // Muchos a Uno Unidireccional No.3:SystemsModels
     @ManyToOne
     public SystemsModels systemsModels;

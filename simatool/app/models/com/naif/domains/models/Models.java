@@ -16,6 +16,7 @@ public class Models extends Model {
     public String description;
     public String observaciones;
     public Float orden;
+    public String link;    
 
     // Muchos a Uno Unidireccional No.3:Domains
     @ManyToOne

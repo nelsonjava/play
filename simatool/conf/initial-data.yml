@@ -42,26 +42,31 @@ models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
 models.com.naif.domains.models.Models(SYSTEMS MODELS):
     orden:          1
     name:           SYSTEMS MODELS
+    link:           https://www.dropbox.com/s/2l9zvablc3oypy0/systems_models_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(LINKS MODELS):
     orden:          2
     name:           LINKS MODELS
+    link:           https://www.dropbox.com/s/vkcj35mg8cnprx5/links_models_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(ENTITIES):
     orden:          3
     name:           ENTITIES
+    link:           https://www.dropbox.com/s/6vq400k6hzpc3it/entities_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(ATTRIBUTES):
     orden:          4
     name:           ATTRIBUTES
+    link:           https://www.dropbox.com/s/88nrzsdfz5wwkmg/attributes_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(RELATIONSHIPS):
     orden:          5
     name:           RELATIONSHIPS
+    link:           https://www.dropbox.com/s/zb4jsb11l00lfy4/relationships_rc2.jpg
     domains:        DOMAIN MODELS
 
 # ----------------------------------------------------------
@@ -200,4 +205,96 @@ models.com.naif.domains.models.Attributes(observaciones):
     nullable:        true
     unico:           false
     entities:        Cardinalities
+    typesAttributes: Text
+
+# ----------------Attributes:SystemsModels-----------------
+
+models.com.naif.domains.models.Attributes(orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del Registro
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        SystemsModels
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(observaciones):
+    orden:           2
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        SystemsModels
+    typesAttributes: Text
+
+# ----------------Attributes:Domains-----------------------
+
+models.com.naif.domains.models.Attributes(orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del Registro
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del Dominio
+    length:          250
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(codigo):
+    orden:           3
+    name:            codigo
+    descripcion:     Codigo del Dominio
+    length:          250
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(release):
+    orden:           4
+    name:            release
+    descripcion:     Version del Dominio
+    length:          250
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(fecha):
+    orden:           5
+    name:            fecha
+    descripcion:     fecha del dominio
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Domains
+    typesAttributes: Date
+
+models.com.naif.domains.models.Attributes(observaciones):
+    orden:           6
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
     typesAttributes: Text

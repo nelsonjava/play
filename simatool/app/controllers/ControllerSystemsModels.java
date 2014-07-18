@@ -26,7 +26,7 @@ public class ControllerSystemsModels extends Application {
 
         render(systemsModels);
     }
-    
+
     public static void domains(Long id ) {
 
         SystemsModels systemsModels = SystemsModels.findById(id);
@@ -45,6 +45,13 @@ public class ControllerSystemsModels extends Application {
 
         Models models = Models.findById(id);
         render(models);
+
+    }
+
+    public static void attributes(Long id ) {
+
+        Entities entities = Entities.findById(id);
+        render(entities);
 
     }
 

@@ -27,6 +27,11 @@ public class Entities extends Model {
     // Muchos a Uno Unidireccional No.3:Models
     @ManyToOne
     public Models models;
+    
+    // Uno a Muchos Bidireccional No.5:Attributes
+    @OneToMany(mappedBy="entities",
+               fetch=FetchType.LAZY, targetEntity=void.class)
+    private Set<Attributes> attributes = new HashSet<Attributes>(0);
 
     public String toString() {
         return name;

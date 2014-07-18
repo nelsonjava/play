@@ -11,7 +11,7 @@
 	 <tr>
 	   <th>Orden</th>
 	   <th>name</th>
-	   <th>Action</th>
+	   <th>Actions</th>
 	</tr>
 	</thead>
 
@@ -20,7 +20,9 @@
 	    <tr>
                <td>${model.orden}</td>
  	       <td><a href="@{entities(model.id)}">${model.name}</a></td>
- 	       <td><a href="">Edit</a></td>
+ 	       <td><a href="model/show?id=${model.id}">Edit</a>
+                   <a href="${model.link}" target="_new">Modelo</a>
+               </td>
    	    </tr>
 	    #{/list}
 	</tbody>
