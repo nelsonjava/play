@@ -135,18 +135,9 @@ public class Application extends Controller {
         render();
     }  // recibos
 
-    public static void list() {
+    public static void systemsModels() {
         List<SystemsModels> systemsModels = SystemsModels.find("order by orden, name").fetch();
         render(systemsModels);
     }
-
-    public static void pruebas(Long id ) {
-
-        SystemsModels systemsModels = SystemsModels.findById(id);
-
-        render(systemsModels);
-    }
-
-
 
 }

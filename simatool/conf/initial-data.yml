@@ -5,9 +5,9 @@ models.com.naif.domains.models.SystemsModels(SIMASOFT):
     name:           SIMASOFT
     observaciones:  Empresa
 
-models.com.naif.domains.models.SystemsModels(MODELOS GCC):
+models.com.naif.domains.models.SystemsModels(GUSTAVO):
     orden:          2
-    name:           MODELOS GCC
+    name:           GUSTAVO
     observaciones:  Gustavo
 
 # ----------------------------------------------------------
@@ -30,12 +30,12 @@ models.com.naif.domains.models.Domains(ISO):
 models.com.naif.domains.models.Domains(CONTABILIDAD BASICA):
     orden:          1
     name:           CONTABILIDAD BASICA
-    systemsModels:  MODELOS GCC
+    systemsModels:  GUSTAVO
 
 models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
     orden:          2
     name:           CARTERA ELEMENTAL
-    systemsModels:  MODELOS GCC
+    systemsModels:  GUSTAVO
 
 # ----------------------------------------------------------
 

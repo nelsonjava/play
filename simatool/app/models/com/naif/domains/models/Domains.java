@@ -19,6 +19,10 @@ public class Domains extends Model {
     @ManyToOne
     public SystemsModels systemsModels;
     
+    @OneToMany(mappedBy="domains",
+               fetch=FetchType.LAZY, targetEntity=void.class)
+    private Set<Models> models = new HashSet<Models>(0);
+
     public String toString() {
         return name;
     }    

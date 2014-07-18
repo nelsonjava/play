@@ -20,6 +20,11 @@ public class Models extends Model {
     // Muchos a Uno Unidireccional No.3:Domains
     @ManyToOne
     public Domains domains;
+    
+    // Uno a Muchos Bidireccional No.5:Entities
+    @OneToMany(mappedBy="models",
+               fetch=FetchType.LAZY, targetEntity=void.class)
+    private Set<Entities> entities = new HashSet<Entities>(0);
 
     public String toString() {
         return name;
