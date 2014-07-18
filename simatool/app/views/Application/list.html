@@ -1,20 +1,22 @@
 #{extends 'main.html' /}
 #{set title:'List' /}
 
-<table>
+<a href="/">Home</a>
+<table border="1">
 	<thead>
 	 <tr>
-	   <th class="name">Orden</th>
-	   <th class="firstname">name</th>
-	    <th class="Action"></th>
+	   <th>Orden</th>
+	   <th>name</th>
+	   <th>Action</th>
 	</tr>
 	</thead>
 
 	<tbody>
 	    #{list systemsModels, as:'systems'}
 	    <tr>
-               <td><a href="@{pruebas(systems.id)}">${systems.orden}</a></td>
+               <td>${systems.orden}</td>
  	       <td><a href="@{pruebas(systems.id)}">${systems.name}</a></td>
+ 	       <td><a href="systemmodel/show?id=${systems.id}">Edit</a></td>
    	    </tr>
 	    #{/list}
 	</tbody>
