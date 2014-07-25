@@ -3,7 +3,9 @@ package models.com.naif.domains.models;
 import java.util.*;
 import javax.persistence.*;
 
-import play.db.jpa.*;
+import play.modules.morphia.Model;
+import com.google.code.morphia.annotations.Entity;
+import play.modules.morphia.Blob;
 
 @Entity
 public class Domains extends Model {
@@ -18,7 +20,7 @@ public class Domains extends Model {
     // Muchos a Uno Unidireccional No.3:SystemsModels
     @ManyToOne
     public SystemsModels systemsModels;
-    
+
     @OneToMany(mappedBy="domains",
                fetch=FetchType.LAZY, targetEntity=void.class)
     private Set<Models> models = new HashSet<Models>(0);

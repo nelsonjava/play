@@ -16,8 +16,11 @@ import models.com.naif.domains.models.*;
 public class ControllerSystemsModels extends Application {
 
     public static void index() {
+/*
         List<SystemsModels> systemsModels = SystemsModels.find("order by orden, name").fetch();
         render(systemsModels);
+*/
+    render();
     }
 
     public static void systemsModels(Long id ) {

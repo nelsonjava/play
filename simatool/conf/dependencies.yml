@@ -1,7 +1,8 @@
 # Application dependencies
 # play dependencies
+# play deps --sync
 
 require:
     - play
     - crud
-    - morphia 1.2.12
+    - play -> morphia 1.2.12

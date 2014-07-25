@@ -3,7 +3,9 @@ package models.com.naif.domains.models;
 import java.util.*;
 import javax.persistence.*;
 
-import play.db.jpa.*;
+import play.modules.morphia.Model;
+import com.google.code.morphia.annotations.Entity;
+import play.modules.morphia.Blob;
 
 @Entity
 public class SystemsModels extends Model {

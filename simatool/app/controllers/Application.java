@@ -135,9 +135,14 @@ public class Application extends Controller {
         render();
     }  // recibos
 
+
     public static void systemsModels() {
+/*
         List<SystemsModels> systemsModels = SystemsModels.find("order by orden, name").fetch();
         render(systemsModels);
+*/
+        render();
     }
+
 
 }

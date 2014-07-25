@@ -3,7 +3,9 @@ package models.com.naif.domains.models;
 import java.util.*;
 import javax.persistence.*;
 
-import play.db.jpa.*;
+import play.modules.morphia.Model;
+import com.google.code.morphia.annotations.Entity;
+import play.modules.morphia.Blob;
 
 @Entity
 public class Models extends Model {
@@ -16,7 +18,7 @@ public class Models extends Model {
     public String description;
     public String observaciones;
     public Float orden;
-    public String link;    
+    public String link;
 
     // Muchos a Uno Unidireccional No.3:Domains
     @ManyToOne
