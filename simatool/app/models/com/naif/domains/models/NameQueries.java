@@ -15,10 +15,6 @@ public class NameQueries extends Model {
     public String observaciones;
     public Float orden;
 
-    // Muchos a Uno Unidireccional No.3:Entities
-    @ManyToOne
-    public Entities entities;
-
     public String toString() {
         return name;
     }

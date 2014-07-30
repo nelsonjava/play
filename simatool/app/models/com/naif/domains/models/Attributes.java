@@ -24,26 +24,6 @@ public class Attributes extends Model {
     public String observaciones;
     public Float orden;
 
-    // Muchos a Uno Unidireccional No.3:Attributes
-    @ManyToOne
-    public Attributes objPadre;
-
-    // Muchos a Uno Unidireccional No.3:Entities
-    @ManyToOne
-    public Entities entities;
-
-    // Muchos a Uno Unidireccional No.3:PropertiesAttributes
-    @ManyToOne
-    public PropertiesAttributes propertiesAttributes;
-
-    // Muchos a Uno Unidireccional No.3:LinksModels
-    @ManyToOne
-    public LinksModels linksModels;
-
-    // Muchos a Uno Unidireccional No.3:TypesAttributes
-    @ManyToOne
-    public TypesAttributes typesAttributes;
-    
     public String toString() {
         return name;
     }
