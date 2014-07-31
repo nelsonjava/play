@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Pruebas' /}
+
+<p><a href="/list">Prev</a></p>
+
+<p>${systemsModels.name}</p>
+
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Orden</th>
+	   <th>name</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list systemsModels.domains, as:'domain'}
+	    <tr>
+               <td>${domain.orden}</td>
+ 	       <td><a href="systemmodel/show?id=${domain.id}">${domain.name}</a></td>
+ 	       <td><a href="systemmodel/show?id=${domain.id}">Edit</a></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+</table>

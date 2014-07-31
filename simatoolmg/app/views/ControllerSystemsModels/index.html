@@ -1,0 +1,24 @@
+#{extends 'main.html' /}
+#{set title:'List' /}
+
+<p><a href="/">Home</a></p>
+<p>SISTEMAS:</p>
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Orden</th>
+	   <th>name</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list systemsModels, as:'systems'}
+	    <tr>
+               <td>${systems.orden}</td>
+ 	       <td><a href="@{domains(systems.id)}">${systems.name}</a></td>
+ 	       <td><a href="systemmodel/show?id=${systems.id}">Edit</a></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+</table>

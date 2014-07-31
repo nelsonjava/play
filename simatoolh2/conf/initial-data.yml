@@ -1,0 +1,203 @@
+# Test data
+
+models.com.naif.domains.models.SystemsModels(SIMASOFT):
+    orden:          1
+    name:           SIMASOFT
+    observaciones:  Empresa
+
+models.com.naif.domains.models.SystemsModels(GUSTAVO):
+    orden:          2
+    name:           GUSTAVO
+    observaciones:  Gustavo
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Domains(DOMAIN MODELS):
+    orden:          1
+    name:           DOMAIN MODELS
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(MODELO BASE):
+    orden:          2
+    name:           MODELO BASE
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(ISO):
+    orden:          3
+    name:           ISO
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(CONTABILIDAD BASICA):
+    orden:          1
+    name:           CONTABILIDAD BASICA
+    systemsModels:  GUSTAVO
+
+models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
+    orden:          2
+    name:           CARTERA ELEMENTAL
+    systemsModels:  GUSTAVO
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Models(SYSTEMS MODELS):
+    orden:          1
+    name:           SYSTEMS MODELS
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(LINKS MODELS):
+    orden:          2
+    name:           LINKS MODELS
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(ENTITIES):
+    orden:          3
+    name:           ENTITIES
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(ATTRIBUTES):
+    orden:          4
+    name:           ATTRIBUTES
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(RELATIONSHIPS):
+    orden:          5
+    name:           RELATIONSHIPS
+    domains:        DOMAIN MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(SystemsModels):
+    orden:          1
+    name:           SystemsModels
+    models:         SYSTEMS MODELS
+
+models.com.naif.domains.models.Entities(Domains):
+    orden:          2
+    name:           Domains
+    models:         SYSTEMS MODELS
+
+models.com.naif.domains.models.Entities(Models):
+    orden:          3
+    name:           Models
+    models:         SYSTEMS MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(TiposLinksModels):
+    orden:          1
+    name:           TiposLinksModels
+    models:         LINKS MODELS
+
+models.com.naif.domains.models.Entities(LinksModels):
+    orden:          2
+    name:           LinksModels
+    models:         LINKS MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(Entities):
+    orden:          1
+    name:           Entities
+    models:         ENTITIES
+
+models.com.naif.domains.models.Entities(NameQueries):
+    orden:          2
+    name:           NameQueries
+    models:         ENTITIES
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(PropertiesAttributes):
+    orden:         1
+    name:          PropertiesAttributes
+    models:        ATTRIBUTES
+
+models.com.naif.domains.models.Entities(TypesAttributes):
+    orden:         2
+    name:          TypesAttributes
+    models:        ATTRIBUTES
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(Cardinalities):
+    orden:        1
+    name:         Cardinalities
+    models:       RELATIONSHIPS
+
+models.com.naif.domains.models.Entities(Relationships):
+    orden:        2
+    name:         Relationships
+    models:       RELATIONSHIPS
+
+# ----------------Attributes:TypesAttributes---------------
+
+models.com.naif.domains.models.TypesAttributes(String):
+    orden:        1
+    type:         String
+
+models.com.naif.domains.models.TypesAttributes(Integer):
+    orden:        2
+    type:         Integer
+
+models.com.naif.domains.models.TypesAttributes(Float):
+    orden:        3
+    type:         Float
+
+models.com.naif.domains.models.TypesAttributes(boolean):
+    orden:        4
+    type:         boolean
+
+models.com.naif.domains.models.TypesAttributes(Date):
+    orden:        5
+    type:         Date
+
+models.com.naif.domains.models.TypesAttributes(Text):
+    orden:        6
+    type:         Text
+
+# ----------------Attributes:Cardinalities-----------------
+
+models.com.naif.domains.models.Attributes(name):
+    orden:           1
+    name:            name
+    descripcion:     Nombre del tipo de cardinalidad
+    length:          250
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(cardinality):
+    orden:           2
+    name:            cardinality
+    descripcion:     Simbolo de la cardinaldad
+    length:          250
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: String
+
+
+models.com.naif.domains.models.Attributes(unidireccional):
+    orden:           3
+    name:            unidireccional
+    descripcion:     Navegavilidad de la relacion
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: boolean
+
+models.com.naif.domains.models.Attributes(observaciones):
+    orden:           4
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: Text

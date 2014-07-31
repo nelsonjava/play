@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /sima                                   Application.sima
+GET     /simacont                               Application.simacont
+GET     /simacart                               Application.simacart
+GET     /maebto                                 Application.maebto
+GET     /recibos                                Application.recibos
+GET     /systemsModels/{id}                     Application.form
+
+# systemsModels
+GET     /Systems                                ControllerSystemsModels.index
+GET     /Domains                                ControllerSystemsModels.domains
+GET     /Models                                 ControllerSystemsModels.models
+GET     /Entities                               ControllerSystemsModels.entities
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+
+# Importar routes del módulo CRUD
+*      /admin                                    module:crud
