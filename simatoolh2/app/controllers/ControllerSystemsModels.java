@@ -13,6 +13,8 @@ import java.util.Map.Entry;
 
 import models.com.naif.domains.models.*;
 
+import controllers.com.naif.simatool.ejb.gen.*;
+
 public class ControllerSystemsModels extends Application {
 
     public static void index() {
@@ -26,7 +28,7 @@ public class ControllerSystemsModels extends Application {
 
         render(systemsModels);
     }
-    
+
     public static void domains(Long id ) {
 
         SystemsModels systemsModels = SystemsModels.findById(id);
@@ -48,6 +50,24 @@ public class ControllerSystemsModels extends Application {
 
     }
 
+    public static void attributes(Long id ) {
+
+        Entities entities = Entities.findById(id);
+        render(entities);
+
+    }
+
+    public static void generar(Long id ) {
+
+        Entities entities = Entities.findById(id);
+
+        EntityGen entityGen = new EntityGen(entities);
+        entityGen.GenEjb();
+
+        render(entities);
+
+
+    }
 
 
 

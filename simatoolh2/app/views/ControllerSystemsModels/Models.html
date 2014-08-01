@@ -5,6 +5,7 @@
 <p><a href="/Domains?id=${domains.id}">Prev</a></p>
 
 <p>MODELOS:${domains.name}</p>
+<p>GENERAR</p>
 
 <table border="1">
 	<thead>
@@ -20,9 +21,8 @@
 	    <tr>
                <td>${model.orden}</td>
  	       <td><a href="@{entities(model.id)}">${model.name}</a></td>
- 	       <td><a href="">Edit</a></td>
+ 	       <td><a href="/model/show?id=${model.id}">Edit</a></td>
    	    </tr>
 	    #{/list}
 	</tbody>
 </table>
-

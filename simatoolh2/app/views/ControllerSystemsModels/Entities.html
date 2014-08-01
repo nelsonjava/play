@@ -19,8 +19,11 @@
 	    #{list models.entities, as:'entity'}
 	    <tr>
                <td>${entity.orden}</td>
- 	       <td><a href="">${entity.name}</a></td>
- 	       <td><a href="">Edit</a></td>
+ 	       <td><a href="@{attributes(entity.id)}">${entity.name}</a></td>
+ 	       <td>
+                  <a href="entity/show?id=${entity.id}">Edit</a>
+                  <a href="@{generar(entity.id)}">Generar</a>
+               </td>
    	    </tr>
 	    #{/list}
 	</tbody>

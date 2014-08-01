@@ -16,6 +16,7 @@ GET     /Systems                                ControllerSystemsModels.index
 GET     /Domains                                ControllerSystemsModels.domains
 GET     /Models                                 ControllerSystemsModels.models
 GET     /Entities                               ControllerSystemsModels.entities
+GET     /Gen                                    ControllerSystemsModels.generar
 
 
 # Ignore favicon requests

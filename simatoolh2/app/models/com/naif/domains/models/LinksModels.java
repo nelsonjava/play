@@ -10,7 +10,7 @@ public class LinksModels extends Model {
 
     public String titulo;
     public String link;
-    public String observacion;
+    public String observaciones;
     public Float orden;
 
     // Muchos a Uno Unidireccional No.3:TiposLinksModels

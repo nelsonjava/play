@@ -13,8 +13,6 @@ public class SystemsModels extends Model {
     public Float orden;
     public String name;
     public String observaciones;
-    
-    public String prueba;    
 
     // Uno a Muchos Bidireccional No.5:Domains
     @OneToMany(mappedBy="systemsModels",
