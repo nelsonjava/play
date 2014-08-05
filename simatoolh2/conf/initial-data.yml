@@ -674,7 +674,7 @@ models.com.naif.domains.models.Attributes(TypesAttributes_observaciones):
     unico:           false
     entities:        TypesAttributes
     typesAttributes: Text
-    
+
 # ----------------Attributes:Attributes-----------------
 
 models.com.naif.domains.models.Attributes(Attributes_orden):
@@ -990,7 +990,6 @@ models.com.naif.domains.models.Attributes(Relationships_description):
     entities:        Relationships
     typesAttributes: String
 
-
 models.com.naif.domains.models.Attributes(Relationships_observaciones):
     orden:           11
     name:            observaciones
@@ -1001,3 +1000,58 @@ models.com.naif.domains.models.Attributes(Relationships_observaciones):
     unico:           false
     entities:        Relationships
     typesAttributes: Text
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No1):
+    orden:          1
+    name:           Uno a Uno Unidireccional No.1
+    cardinality:    1..1
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No2):
+    orden:          2
+    name:           Uno a Uno Bidireccional No.2
+    cardinality:    1..1
+    unidireccional: false
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No3):
+    orden:          3
+    name:           Muchos a Uno Unidireccional No.3
+    cardinality:    "*..1"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No4):
+    orden:          4
+    name:           Uno a Muchos Unidireccional No.4
+    cardinality:    "1..*"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No5):
+    orden:          5
+    name:           Uno a Muchos Bidireccional No.5
+    cardinality:    1..*
+    unidireccional: false
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
+    orden:          6
+    name:           Muchos a Muchos Unidireccional No.6
+    cardinality:    "*..*"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No7):
+    orden:          7
+    name:           Muchos a Muchos Bidireccional No.7
+    cardinality:    "*..*"
+    unidireccional: false
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Relationships(Relationships_):
+    orden:         1
+    name:          1..* SystemsModels to Domains
+    optionality:   true
+    from:          SystemsModels
+    to:            Domains
+
+

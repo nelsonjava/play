@@ -30,8 +30,9 @@ public class EntityGen {
        javaSource.append("\n");
 
        for (Attributes attributes : entities.attributes) {
-           javaSource.append("\n"+attributes.name);
+           javaSource.append("\n    "+attributes.typesAttributes.type+" "+attributes.name+";");
        }
+       javaSource.append("\n");
        javaSource.append("\n}");
 
        FileTxt filetxt = new FileTxt("c:/models.com.naif.domains", entities.name+".java", javaSource.toString());

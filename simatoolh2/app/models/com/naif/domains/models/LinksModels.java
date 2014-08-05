@@ -37,10 +37,6 @@ public class LinksModels extends Model {
     @ManyToOne
     public Relationships relationships;
 
-    // Muchos a Uno Unidireccional No.3:Cardinalities
-    @ManyToOne
-    public Cardinalities cardinalities;
-
     // Muchos a Uno Unidireccional No.3:Entities
     @ManyToOne
     public Entities entities;
