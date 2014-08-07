@@ -7,14 +7,12 @@ import play.db.jpa.*;
 
 @Entity
 public class Cardinalities extends Model {
-  
-    private String name;
-    private String cardinality;
-    private boolean unidireccional;
-    private String observaciones;
-    private Float orden;
 
-
+    public String name;
+    public String cardinality;
+    public boolean unidireccional;
+    public String observaciones;
+    public Float orden;
 
     // Muchos a Uno Unidireccional No.3:LinksModels
     @ManyToOne

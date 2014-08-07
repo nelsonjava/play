@@ -21,7 +21,6 @@ public class Relationships extends Model {
     public Float orden;
 
     // Muchos a Uno Unidireccional No.3:Cardinalities
-
     @ManyToOne
     public Cardinalities cardinalities;
 

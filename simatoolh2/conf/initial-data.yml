@@ -1012,7 +1012,7 @@ models.com.naif.domains.models.Cardinalities(Cardinalities_No1):
 models.com.naif.domains.models.Cardinalities(Cardinalities_No2):
     orden:          2
     name:           Uno a Uno Bidireccional No.2
-    cardinality:    1..1
+    cardinality:    1..1b
     unidireccional: false
 
 models.com.naif.domains.models.Cardinalities(Cardinalities_No3):
@@ -1030,7 +1030,7 @@ models.com.naif.domains.models.Cardinalities(Cardinalities_No4):
 models.com.naif.domains.models.Cardinalities(Cardinalities_No5):
     orden:          5
     name:           Uno a Muchos Bidireccional No.5
-    cardinality:    1..*
+    cardinality:    1..*b
     unidireccional: false
 
 models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
@@ -1042,12 +1042,12 @@ models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
 models.com.naif.domains.models.Cardinalities(Cardinalities_No7):
     orden:          7
     name:           Muchos a Muchos Bidireccional No.7
-    cardinality:    "*..*"
+    cardinality:    "*..*b"
     unidireccional: false
 
 # ----------------------------------------------------------
 
-models.com.naif.domains.models.Relationships(Relationships_):
+models.com.naif.domains.models.Relationships(Relationships):
     orden:         1
     name:          1..* SystemsModels to Domains
     optionality:   true

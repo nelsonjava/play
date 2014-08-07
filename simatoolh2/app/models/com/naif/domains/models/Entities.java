@@ -33,6 +33,15 @@ public class Entities extends Model {
                fetch=FetchType.LAZY, targetEntity=void.class)
     public Set<Attributes> attributes = new HashSet<Attributes>(0);
 
+    // Uno a Muchos Bidireccional No.5:Relationships
+    @OneToMany(mappedBy="from",
+               fetch=FetchType.LAZY, targetEntity=void.class)
+    public  Set<Relationships> from = new HashSet<Relationships>(0);
+
+    // Uno a Muchos Bidireccional No.5:Relationships
+    @OneToMany(mappedBy="to",
+               fetch=FetchType.LAZY, targetEntity=void.class)
+    public Set<Relationships> to = new HashSet<Relationships>(0);
 
     public String toString() {
         return name;

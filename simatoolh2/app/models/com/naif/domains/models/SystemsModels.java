@@ -12,15 +12,10 @@ public class SystemsModels extends Model {
     public String name;
     public String observaciones;
 
-/*
-    @OneToMany(mappedBy="post", cascade=CascadeType.ALL)
-    public List<Comment> comments;
-*/
-
+    // Uno a Muchos Bidireccional No.5:Domains
     @OneToMany(mappedBy="systemsModels",
                fetch=FetchType.LAZY, targetEntity=void.class)
     public Set<Domains> domains = new HashSet<Domains>(0);
-
 
     public String toString() {
         return name;
