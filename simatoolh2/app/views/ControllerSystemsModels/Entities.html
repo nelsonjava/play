@@ -20,10 +20,7 @@
 	    <tr>
                <td>${entity.orden}</td>
  	       <td><a href="@{attributes(entity.id)}">${entity.name}</a></td>
- 	       <td>
-                  <a href="entity/show?id=${entity.id}">Edit</a>
-                  <a href="@{frameworks(entity.id)}">Generar</a>
-               </td>
+ 	       <td><a href="entity/show?id=${entity.id}">Edit</a></td>
    	    </tr>
 	    #{/list}
 	</tbody>

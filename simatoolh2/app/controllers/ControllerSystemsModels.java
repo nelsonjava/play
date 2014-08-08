@@ -57,19 +57,6 @@ public class ControllerSystemsModels extends Application {
 
     }
 
-/*
-    public static void generar(Long id ) {
-
-        Entities entities = Entities.findById(id);
-
-        EntityGen entityGen = new EntityGen(entities);
-        entityGen.GenEjb();
-
-        render(entities);
-
-    }
-*/
-
     public static void generar(Long idDomains, Long idFrameworks ) {
 
         Domains domains = Domains.findById(idDomains);
