@@ -28,23 +28,43 @@ public class EntityGen {
        this.frameworks = frameworks;
     }
 
-    public void imports() {
+    public void imports(Frameworks frameworks) {
 
        javaSource.append("\npackage models.com.naif.domains.models;");
        javaSource.append("\n");
        javaSource.append("\nimport java.util.*;");
-       javaSource.append("\nimport javax.persistence.*;");
        javaSource.append("\n");
-       javaSource.append("\nimport play.db.jpa.*;");
+
+       switch(frameworks.persistence) {
+           case "jpa":
+                javaSource.append("\nimport javax.persistence.*;");
+                break;
+
+           case "play":
+                javaSource.append("\nimport javax.persistence.*;");
+                javaSource.append("\nimport play.db.jpa.*;");
+                break;
+
+           case "morphia":
+                javaSource.append("\nimport javax.persistence.*;");
+                javaSource.append("\nimport play.db.morphia.*;");
+                break;
+
+           case "sqlite":
+                javaSource.append("\nimport javax.persistence.*;");
+                javaSource.append("\nimport sqlite.pendiente");
+                break;
+
+           default:
+                break;
+       } // switch
+
        javaSource.append("\n");
        javaSource.append("\n@Entity");
        javaSource.append("\npublic class "+entities.name+" extends Model {");
        javaSource.append("\n");
 
-       javaSource.append("\n");
-       javaSource.append(frameworks.persistence);
-
-    }
+    } // imports
 
     public void attributes() {
 
@@ -73,7 +93,7 @@ public class EntityGen {
     public void cardinality(Relationships relationships, String type) {
 
         switch(relationships.cardinalities.cardinality) {
-          
+
             case "1..1":     // Uno a Uno Unidireccional No.1
                  javaSource.append("\n");
                  javaSource.append(relationships.cardinalities.cardinality+" OK");
@@ -119,7 +139,7 @@ public class EntityGen {
                  } // switch
 
                  break;
-                 
+
             case "*..*":     // Muchos a Muchos Unidireccional No.6
                  javaSource.append("\n");
                  javaSource.append(relationships.cardinalities.cardinality+" OK");
@@ -139,7 +159,7 @@ public class EntityGen {
 
     public void GenEjb() {
 
-       imports();
+       imports(frameworks);
        attributes();
        to();
        from();

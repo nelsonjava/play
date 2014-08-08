@@ -5,13 +5,18 @@ models.com.naif.domains.models.Frameworks(play_jpa):
     name:           play
     persistence:    jpa
 
-models.com.naif.domains.models.Frameworks(play_morphia):
+models.com.naif.domains.models.Frameworks(play_play):
     orden:          2
     name:           play
-    persistence:    morphia
-    
-models.com.naif.domains.models.Frameworks(play_sqlite):
+    persistence:    play
+
+models.com.naif.domains.models.Frameworks(play_morphia):
     orden:          3
+    name:           play
+    persistence:    morphia
+
+models.com.naif.domains.models.Frameworks(play_sqlite):
+    orden:          4
     name:           android
     persistence:    sqlite
 
