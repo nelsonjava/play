@@ -3,7 +3,8 @@
 
 <p><a href="/">Home</a></p>
 <p>FRAMEWORKS:</p>
-<p>ENTITY:${entities.name}</p>
+<p>DOMINIO:${domains.name}</p>
+
 <table border="1">
 	<thead>
 	 <tr>
@@ -22,7 +23,7 @@
  	       <td>${framework.persistence}</td>
  	       <td>
                  <a href="framework/show?id=${framework.id}">Edit</a>
- 	         <a href="@{generar(entities.id,framework.id)}">Generar</a>
+ 	         <a href="@{generar(domains.id,framework.id)}">Generar</a>
                </td>
    	    </tr>
 	    #{/list}

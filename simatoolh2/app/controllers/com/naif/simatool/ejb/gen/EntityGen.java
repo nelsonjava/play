@@ -13,6 +13,7 @@ import com.naif.tools.filetxt.FileTxt;
 public class EntityGen {
 
     private StringBuilder javaSource = new StringBuilder();
+    private Domains domains;
     private Entities entities;
     private Frameworks frameworks;
 
@@ -25,6 +26,11 @@ public class EntityGen {
 
     public EntityGen(Entities entities, Frameworks frameworks) {
        this.entities = entities;
+       this.frameworks = frameworks;
+    }
+
+    public EntityGen(Domains domains, Frameworks frameworks) {
+       this.domains = domains;
        this.frameworks = frameworks;
     }
 
@@ -156,8 +162,24 @@ public class EntityGen {
 
     } // cardinality
 
+    public void GenDominio() {
+
+       for (Models models : domains.models) {
+
+           for (Entities entities : models.entities) {
+               this.entities = entities;
+               GenEjb();
+           } // for
+
+       } // for
+
+
+    } // GenDominio()
+
 
     public void GenEjb() {
+
+       javaSource.setLength(0);
 
        imports(frameworks);
        attributes();
@@ -167,7 +189,7 @@ public class EntityGen {
        javaSource.append("\n");
        javaSource.append("\n}");
 
-       FileTxt filetxt = new FileTxt("c:/models.com.naif.domains", entities.name+".java", javaSource.toString());
+       FileTxt filetxt = new FileTxt("c:/models.com.naif.domains."+frameworks.persistence, entities.name+".java", javaSource.toString());
 
        System.out.println(javaSource);
 

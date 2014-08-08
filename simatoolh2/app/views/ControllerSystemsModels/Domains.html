@@ -6,7 +6,7 @@
 <p><a href="/Systems">Prev</a></p>
 
 
-<p>DOMINIOS:${systemsModels.name}</p>
+<p>SISTEMA:${systemsModels.name}</p>
 
 <table border="1">
 	<thead>
@@ -22,7 +22,10 @@
 	    <tr>
                <td>${domain.orden}</td>
  	       <td><a href="@{models(domain.id)}">${domain.name}</a></td>
- 	       <td><a href="/domain/show?id=${domain.id}">Edit</a></td>
+ 	       <td>
+                  <a href="/domain/show?id=${domain.id}">Edit</a>
+                  <a href="@{frameworks(domain.id)}">Generar</a>
+                </td>
    	    </tr>
 	    #{/list}
 	</tbody>

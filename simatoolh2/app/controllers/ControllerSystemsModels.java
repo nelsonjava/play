@@ -70,26 +70,26 @@ public class ControllerSystemsModels extends Application {
     }
 */
 
-    public static void generar(Long idEntities, Long idFrameworks ) {
+    public static void generar(Long idDomains, Long idFrameworks ) {
 
-        Entities entities = Entities.findById(idEntities);
+        Domains domains = Domains.findById(idDomains);
 
         Frameworks frameworks = Frameworks.findById(idFrameworks);
 
-        EntityGen entityGen = new EntityGen(entities,frameworks);
-        entityGen.GenEjb();
+        EntityGen entityGen = new EntityGen(domains,frameworks);
+        entityGen.GenDominio();
 
-        render(entities);
+        render(domains);
 
     }
 
 
     public static void frameworks(Long id ) {
 
-        Entities entities = Entities.findById(id);
+        Domains domains = Domains.findById(id);
 
         List<Frameworks> frameworks = Frameworks.find("order by orden, name").fetch();
-        render(frameworks,entities);
+        render(frameworks,domains);
 
     }
 

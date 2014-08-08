@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- rem git remote add origin https://github.com/nelsonjava/www.git -->
+<!-- git clone https://github.com/nelsonjava/play.git -->
 <!-- http://ebook.online-convert.com/es/convertir-a-epub -->
 <project name="gi" default="bak" basedir=".">
 
