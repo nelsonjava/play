@@ -1,5 +1,22 @@
 # Test data
 
+models.com.naif.domains.models.Frameworks(play_jpa):
+    orden:          1
+    name:           play
+    persistence:    jpa
+
+models.com.naif.domains.models.Frameworks(play_morphia):
+    orden:          2
+    name:           play
+    persistence:    morphia
+    
+models.com.naif.domains.models.Frameworks(play_sqlite):
+    orden:          3
+    name:           android
+    persistence:    sqlite
+
+# ----------------------------------------------------------
+
 models.com.naif.domains.models.SystemsModels(SIMASOFT):
     orden:          1
     name:           SIMASOFT

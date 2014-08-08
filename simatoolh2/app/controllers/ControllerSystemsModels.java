@@ -57,6 +57,7 @@ public class ControllerSystemsModels extends Application {
 
     }
 
+/*
     public static void generar(Long id ) {
 
         Entities entities = Entities.findById(id);
@@ -66,11 +67,57 @@ public class ControllerSystemsModels extends Application {
 
         render(entities);
 
+    }
+*/
+
+    public static void generar(Long idEntities, Long idFrameworks ) {
+
+        Entities entities = Entities.findById(idEntities);
+
+        Frameworks frameworks = Frameworks.findById(idFrameworks);
+
+        EntityGen entityGen = new EntityGen(entities,frameworks);
+        entityGen.GenEjb();
+
+        render(entities);
 
     }
 
 
+    public static void frameworks(Long id ) {
 
+        Entities entities = Entities.findById(id);
+
+        List<Frameworks> frameworks = Frameworks.find("order by orden, name").fetch();
+        render(frameworks,entities);
+
+    }
+
+    public static void frameworksGen(Long id ) {
+
+        Entities entities = Entities.findById(id);
+
+        EntityGen entityGen = new EntityGen(entities);
+        entityGen.GenEjb();
+
+        render(entities);
+
+    }
+
+/*
+    public static void frameworksGen(Long idEntities,Long idFrameworks) {
+
+        Entities entities = Entities.findById(idEntities);
+
+        Frameworks frameworks = Frameworks.findById(idFrameworks);
+
+        EntityGen entityGen = new EntityGen(entities);
+        entityGen.GenEjb();
+
+        render(entities);
+
+    }
+*/
 
 }
 

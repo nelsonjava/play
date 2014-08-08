@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'List' /}
+
+<p><a href="/">Home</a></p>
+<p>FRAMEWORKS:</p>
+<p>ENTITY:${entities.name}</p>
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Orden</th>
+	   <th>name</th>
+	   <th>persistence</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list frameworks, as:'framework'}
+	    <tr>
+               <td>${framework.orden}</td>
+ 	       <td><a href="">${framework.name}</a></td>
+ 	       <td><a href="">${framework.persistence}</a></td>
+ 	       <td>
+                 <a href="framework/show?id=${framework.id}">Edit</a>
+ 	         <a href="@{generar(entities.id,framework.id)}">Generar</a>
+               </td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+</table>
+

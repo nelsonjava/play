@@ -14,12 +14,18 @@ public class EntityGen {
 
     private StringBuilder javaSource = new StringBuilder();
     private Entities entities;
+    private Frameworks frameworks;
 
     public EntityGen() {
     }
 
     public EntityGen(Entities entities) {
        this.entities = entities;
+    }
+
+    public EntityGen(Entities entities, Frameworks frameworks) {
+       this.entities = entities;
+       this.frameworks = frameworks;
     }
 
     public void imports() {
@@ -34,6 +40,9 @@ public class EntityGen {
        javaSource.append("\n@Entity");
        javaSource.append("\npublic class "+entities.name+" extends Model {");
        javaSource.append("\n");
+
+       javaSource.append("\n");
+       javaSource.append(frameworks.persistence);
 
     }
 

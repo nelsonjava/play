@@ -17,6 +17,8 @@ GET     /Domains                                ControllerSystemsModels.domains
 GET     /Models                                 ControllerSystemsModels.models
 GET     /Entities                               ControllerSystemsModels.entities
 GET     /Gen                                    ControllerSystemsModels.generar
+GET     /Frameworks                             ControllerSystemsModels.frameworks
+GET     /FrameworksGen                          ControllerSystemsModels.frameworksGen
 
 
 # Ignore favicon requests
