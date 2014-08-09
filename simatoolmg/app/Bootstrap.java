@@ -14,7 +14,7 @@ public class Bootstrap extends Job {
     public void doJob() {
         // Load default data if the database is empty
         if(SystemsModels.count() == 0) {
-//            Fixtures.load("initial-data.yml");
+            Fixtures.load("initial-data.yml");
         }
     }
     

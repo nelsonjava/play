@@ -4,5 +4,5 @@
 
 require:
     - play
-    - play ->crud
+    - play -> crud
     - play -> morphia 1.2.12
