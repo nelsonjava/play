@@ -6,16 +6,17 @@ import play.modules.morphia.Model;
 import com.google.code.morphia.annotations.Entity;
 
 @Entity
-public class SystemsModels extends Model {
+public class Domains extends Model {
 
-    public Float orden;
     public String name;
-    public String observaciones;
+    public String codigo;
+    public String release;
+    public Date fecha;
+    public String description;
+    public Float orden;
 
     public String toString() {
         return name;
-    }
+    }    
 
 } // Fin de la clase
-
-

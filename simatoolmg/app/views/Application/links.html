@@ -11,6 +11,7 @@
 <li><a href="#play">PLAY FRAMEWORK</a></li>
 <li><a href="#sima">SIMA</a></li>
 <li><a href="#domains">DOMAINS</a></li>
+<li><a href="#mongo">MONGO</a></li>
 </ol>
 
 <a name="play"></a>
@@ -52,6 +53,52 @@
 <li><a href="https://www.dropbox.com/s/zb4jsb11l00lfy4/relationships_rc2.jpg" TARGET="_new">RELATIONSHIPS</a></li>
 </ul>
 </li>
+
+<a name="mongo"></a>
+<li>MONGO
+
+<ul>Instalar
+<li>mongod --dbpath D:\javadat\mongodb-data\database</li>
+<li>mongod --dbpath D:\javadat\mongodb-data\database --repair</li>
+<li>mongodb Web Interface: http://localhost:28017/</li>
+</ul>
+
+<ul>Comandos:
+<li>show databases</li>
+<li>show dbs</li>
+<li>use test</li>
+<li>show collections</li>
+</ul>
+
+<ul>Documentos:
+<li>db.SystemsModels.find().pretty()</li>
+<li>db.Domains.find().pretty()</li>
+<li>db.Domains.remove() - Elimina los registros</li>
+<li>db.dropDatabase() - Elimina la Base de Datos</li>
+</ul>
+
+<ul>Otros comandos:
+<li>cur = db.Domains.find(); null;</li>
+<li>db.Domains.count() - Cuenta los documentos</li>
+<li>db.Domains.findOne( { name: "DOMAIN MODELS" } ) - Muestra un registro de forma aleatoria</li>
+</ul>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -9,3 +9,30 @@ models.com.naif.domains.models.SystemsModels(GUSTAVO):
     orden:          2
     name:           GUSTAVO
     observaciones:  Gustavo
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Domains(DOMAIN MODELS):
+    orden:          1
+    name:           DOMAIN MODELS
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(MODELO BASE):
+    orden:          2
+    name:           MODELO BASE
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(ISO):
+    orden:          3
+    name:           ISO
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(CONTABILIDAD BASICA):
+    orden:          1
+    name:           CONTABILIDAD BASICA
+    systemsModels:  GUSTAVO
+
+models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
+    orden:          2
+    name:           CARTERA ELEMENTAL
+    systemsModels:  GUSTAVO
