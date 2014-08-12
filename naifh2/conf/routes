@@ -1,0 +1,28 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /links                                  Application.links
+
+# Naif
+GET     /Systems                                Naif.index
+GET     /Domains                                Naif.domains
+GET     /Models                                 Naif.models
+GET     /Entities                               Naif.entities
+GET     /Gen                                    Naif.generar
+GET     /Frameworks                             Naif.frameworks
+GET     /FrameworksGen                          Naif.frameworksGen
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+
+# Importar routes del módulo CRUD
+*      /admin              module:crud

@@ -1,0 +1,1079 @@
+# Test data
+
+models.com.naif.domains.models.Frameworks(play_jpa):
+    orden:          1
+    name:           play
+    persistence:    jpa
+
+models.com.naif.domains.models.Frameworks(play_play):
+    orden:          2
+    name:           play
+    persistence:    play
+
+models.com.naif.domains.models.Frameworks(play_morphia):
+    orden:          3
+    name:           play
+    persistence:    morphia
+
+models.com.naif.domains.models.Frameworks(play_sqlite):
+    orden:          4
+    name:           android
+    persistence:    sqlite
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.SystemsModels(SIMASOFT):
+    orden:          1
+    name:           SIMASOFT
+    observaciones:  Empresa
+
+models.com.naif.domains.models.SystemsModels(GUSTAVO):
+    orden:          2
+    name:           GUSTAVO
+    observaciones:  Gustavo
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Domains(DOMAIN MODELS):
+    orden:          1
+    name:           DOMAIN MODELS
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(MODELO BASE):
+    orden:          2
+    name:           MODELO BASE
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(ISO):
+    orden:          3
+    name:           ISO
+    systemsModels:  SIMASOFT
+
+models.com.naif.domains.models.Domains(CONTABILIDAD BASICA):
+    orden:          1
+    name:           CONTABILIDAD BASICA
+    systemsModels:  GUSTAVO
+
+models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
+    orden:          2
+    name:           CARTERA ELEMENTAL
+    systemsModels:  GUSTAVO
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Models(SYSTEMS MODELS):
+    orden:          1
+    name:           SYSTEMS MODELS
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(LINKS MODELS):
+    orden:          2
+    name:           LINKS MODELS
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(ENTITIES):
+    orden:          3
+    name:           ENTITIES
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(ATTRIBUTES):
+    orden:          4
+    name:           ATTRIBUTES
+    domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(RELATIONSHIPS):
+    orden:          5
+    name:           RELATIONSHIPS
+    domains:        DOMAIN MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(SystemsModels):
+    orden:          1
+    name:           SystemsModels
+    models:         SYSTEMS MODELS
+
+models.com.naif.domains.models.Entities(Domains):
+    orden:          2
+    name:           Domains
+    models:         SYSTEMS MODELS
+
+models.com.naif.domains.models.Entities(Models):
+    orden:          3
+    name:           Models
+    models:         SYSTEMS MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(TiposLinksModels):
+    orden:          1
+    name:           TiposLinksModels
+    models:         LINKS MODELS
+
+models.com.naif.domains.models.Entities(LinksModels):
+    orden:          2
+    name:           LinksModels
+    models:         LINKS MODELS
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(Entities):
+    orden:          1
+    name:           Entities
+    models:         ENTITIES
+
+models.com.naif.domains.models.Entities(NameQueries):
+    orden:          2
+    name:           NameQueries
+    models:         ENTITIES
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(PropertiesAttributes):
+    orden:         1
+    name:          PropertiesAttributes
+    models:        ATTRIBUTES
+
+models.com.naif.domains.models.Entities(TypesAttributes):
+    orden:         2
+    name:          TypesAttributes
+    models:        ATTRIBUTES
+
+models.com.naif.domains.models.Entities(Attributes):
+    orden:         3
+    name:          Attributes
+    models:        ATTRIBUTES
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(Cardinalities):
+    orden:        1
+    name:         Cardinalities
+    models:       RELATIONSHIPS
+
+models.com.naif.domains.models.Entities(Relationships):
+    orden:        2
+    name:         Relationships
+    models:       RELATIONSHIPS
+
+# ----------------Attributes:TypesAttributes---------------
+
+models.com.naif.domains.models.TypesAttributes(String):
+    orden:        1
+    type:         String
+
+models.com.naif.domains.models.TypesAttributes(Integer):
+    orden:        2
+    type:         Integer
+
+models.com.naif.domains.models.TypesAttributes(Float):
+    orden:        3
+    type:         Float
+
+models.com.naif.domains.models.TypesAttributes(boolean):
+    orden:        4
+    type:         boolean
+
+models.com.naif.domains.models.TypesAttributes(Date):
+    orden:        5
+    type:         Date
+
+models.com.naif.domains.models.TypesAttributes(Text):
+    orden:        6
+    type:         Text
+
+
+# ----------------Attributes:SystemsModels-----------------
+
+models.com.naif.domains.models.Attributes(SystemsModels_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        SystemsModels
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(SystemsModels_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del Sistema
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        SystemsModels
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(SystemsModels_observaciones):
+    orden:           3
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        SystemsModels
+    typesAttributes: Text
+
+# ----------------Attributes:Domains-----------------
+
+models.com.naif.domains.models.Attributes(Domains_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Domains_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del Sistema
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Domains_codigo):
+    orden:           3
+    name:            codigo
+    descripcion:     Codigo del Modelo del Dominio
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Domains_release):
+    orden:           4
+    name:            release
+    descripcion:     Version del Modelo del Dominio
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Domains_fecha):
+    orden:           5
+    name:            fecha
+    descripcion:     Fecha del Modelo del Dominio
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: Date
+
+models.com.naif.domains.models.Attributes(Domains_description):
+    orden:           5
+    name:            description
+    descripcion:     Descripcion del Modelo del Dominio
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Domains
+    typesAttributes: Text
+
+# ----------------Attributes:Models-----------------
+
+models.com.naif.domains.models.Attributes(Models_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del Registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Models
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Models_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del Modelo
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Models_paquete):
+    orden:           3
+    name:            paquete
+    descripcion:     Paquete del Modelo
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Models
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Models_codigo):
+    orden:           4
+    name:            codigo
+    descripcion:     Codigo del paquete
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Models_release):
+    orden:           5
+    name:            release
+    descripcion:     Version del paquete
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Models_date):
+    orden:           6
+    name:            date
+    descripcion:     Fecha del modelo
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: Date
+
+models.com.naif.domains.models.Attributes(Models_description):
+    orden:           7
+    name:            description
+    descripcion:     Descripcion del Modelo
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: Text
+
+models.com.naif.domains.models.Attributes(Models_observaciones):
+    orden:           8
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Models
+    typesAttributes: Text
+
+
+# ----------------Attributes:TiposLinksModels-----------------
+
+models.com.naif.domains.models.Attributes(TiposLinksModels_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        TiposLinksModels
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(TiposLinksModels_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre de la Categoria del enlace
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        TiposLinksModels
+    typesAttributes: String
+
+# ----------------Attributes:LinksModels-----------------
+
+models.com.naif.domains.models.Attributes(LinksModels_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del Registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        LinksModels
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(LinksModels_titulo):
+    orden:           2
+    name:            titulo
+    descripcion:     Titulo del link
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        LinksModels
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(LinksModels_link):
+    orden:           3
+    name:            link
+    descripcion:     Link del sitio
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        LinksModels
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(LinksModels_observaciones):
+    orden:           4
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        LinksModels
+    typesAttributes: Text
+
+# ----------------Attributes:Entities-----------------
+
+models.com.naif.domains.models.Attributes(Entities_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Entities_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre de la Entida
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Entities_tabla):
+    orden:           3
+    name:            tabla
+    descripcion:     Nombre de la tabla de la entidad
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Entities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Entities_tablaSecuencia;):
+    orden:           4
+    name:            tablaSecuencia;
+    descripcion:     Tabla de la secuencia de la Entidad
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Entities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Entities_modifier):
+    orden:           5
+    name:            modifier
+    descripcion:     Modificador
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Entities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Entities_extend):
+    orden:           6
+    name:            extend
+    descripcion:     Extend de la Entidad
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Entities_imports):
+    orden:           7
+    name:            imports
+    descripcion:     Imports de la Clase
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Text
+
+models.com.naif.domains.models.Attributes(Entities_annotations):
+    orden:           8
+    name:            annotations
+    descripcion:     Anotaciones de la Clase
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Text
+
+models.com.naif.domains.models.Attributes(Entities_source):
+    orden:           9
+    name:            source
+    descripcion:     Codigo del codigo fuente
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Text
+
+models.com.naif.domains.models.Attributes(Entities_description):
+    orden:           10
+    name:            description
+    descripcion:     Descripcion
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Text
+
+models.com.naif.domains.models.Attributes(Entities_):
+    orden:           11
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Entities
+    typesAttributes: Text
+
+# ----------------Attributes:NameQueries-----------------
+
+models.com.naif.domains.models.Attributes(NameQueries_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        NameQueries
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(NameQueries_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del NameQueries
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        NameQueries
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(NameQueries_query):
+    orden:           3
+    name:            query
+    descripcion:     Query del NameQuery
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        NameQueries
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(NameQueries_observaciones):
+    orden:           4
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        NameQueries
+    typesAttributes: Text
+
+# ----------------Attributes:PropertiesAttributes-----------------
+
+models.com.naif.domains.models.Attributes(PropertiesAttributes_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        PropertiesAttributes
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(PropertiesAttributes_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del NameQueries
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        PropertiesAttributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(PropertiesAttributes_value):
+    orden:           3
+    name:            value
+    descripcion:     Valor de la propiedad del atributo
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        PropertiesAttributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(PropertiesAttributes_observaciones):
+    orden:           4
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        PropertiesAttributes
+    typesAttributes: Text
+
+# ----------------Attributes:TypesAttributes-----------------
+
+models.com.naif.domains.models.Attributes(TypesAttributes_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        TypesAttributes
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(TypesAttributes_type):
+    orden:           2
+    name:            type
+    descripcion:     Type del Atributo
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        TypesAttributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(TypesAttributes_observaciones):
+    orden:           3
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        TypesAttributes
+    typesAttributes: Text
+
+# ----------------Attributes:Attributes-----------------
+
+models.com.naif.domains.models.Attributes(Attributes_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Attributes
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Attributes_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del Campo
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_length):
+    orden:           3
+    name:            length
+    descripcion:     Longitud del campo
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Attributes
+    typesAttributes: Integer
+
+models.com.naif.domains.models.Attributes(Attributes_precision):
+    orden:           4
+    name:            precision
+    descripcion:     Precision del campo
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: Integer
+
+models.com.naif.domains.models.Attributes(Attributes_nullable):
+    orden:           5
+    name:            nullable
+    descripcion:     Aceptar nulos
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Attributes
+    typesAttributes: boolean
+
+models.com.naif.domains.models.Attributes(Attributes_unico):
+    orden:           6
+    name:            unico
+    descripcion:     Valores unicos
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: boolean
+
+models.com.naif.domains.models.Attributes(Attributes_descripcion):
+    orden:           7
+    name:            descripcion
+    descripcion:     Descripcion
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_field):
+    orden:           8
+    name:            field
+    descripcion:     field
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_access):
+    orden:           9
+    name:            access
+    descripcion:     access
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_columnDefinition):
+    orden:           10
+    name:            columnDefinition
+    descripcion:     columnDefinition
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_annotationsField):
+    orden:           11
+    name:            annotationsField
+    descripcion:     annotationsField
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_annotationsMethod):
+    orden:           12
+    name:            annotationsMethod
+    descripcion:     annotationsMethod
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Attributes_observaciones):
+    orden:           13
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Attributes
+    typesAttributes: String
+
+# ----------------Attributes:Cardinalities-----------------
+
+models.com.naif.domains.models.Attributes(Cardinalities_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Cardinalities_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del tipo de cardinalidad
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Cardinalities_cardinality):
+    orden:           3
+    name:            cardinality
+    descripcion:     Simbolo de la cardinaldad
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: String
+
+
+models.com.naif.domains.models.Attributes(Cardinalities_unidireccional):
+    orden:           4
+    name:            unidireccional
+    descripcion:     Navegavilidad de la relacion
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: boolean
+
+models.com.naif.domains.models.Attributes(Cardinalities_observaciones):
+    orden:           5
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Cardinalities
+    typesAttributes: Text
+
+# ----------------Attributes:Relationships-----------------
+
+models.com.naif.domains.models.Attributes(Relationships_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Relationships
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Relationships_name):
+    orden:           2
+    name:            name
+    descripcion:     Nombre del tipo de cardinalidad
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_optionality):
+    orden:           3
+    name:            optionality
+    descripcion:     Optionality
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Relationships
+    typesAttributes: boolean
+
+models.com.naif.domains.models.Attributes(Relationships_mappedby):
+    orden:           4
+    name:            mappedby
+    descripcion:     mappedby
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_annotationsField;):
+    orden:           5
+    name:            annotationsField;
+    descripcion:     annotationsField;
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_annotationsMethod):
+    orden:           6
+    name:            annotationsMethod
+    descripcion:     annotationsMethod
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_tabla):
+    orden:           7
+    name:            tabla
+    descripcion:     tabla
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_idTabla1):
+    orden:           8
+    name:            idTabla1
+    descripcion:     idTabla1
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_idTabla2):
+    orden:           9
+    name:            idTabla2
+    descripcion:     idTabla2
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_description):
+    orden:           10
+    name:            description
+    descripcion:     description
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Relationships_observaciones):
+    orden:           11
+    name:            observaciones
+    descripcion:     Observaciones
+    length:          0
+    precision:       0
+    nullable:        true
+    unico:           false
+    entities:        Relationships
+    typesAttributes: Text
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No1):
+    orden:          1
+    name:           Uno a Uno Unidireccional No.1
+    cardinality:    1..1
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No2):
+    orden:          2
+    name:           Uno a Uno Bidireccional No.2
+    cardinality:    1..1b
+    unidireccional: false
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No3):
+    orden:          3
+    name:           Muchos a Uno Unidireccional No.3
+    cardinality:    "*..1"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No4):
+    orden:          4
+    name:           Uno a Muchos Unidireccional No.4
+    cardinality:    "1..*"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No5):
+    orden:          5
+    name:           Uno a Muchos Bidireccional No.5
+    cardinality:    1..*b
+    unidireccional: false
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
+    orden:          6
+    name:           Muchos a Muchos Unidireccional No.6
+    cardinality:    "*..*"
+    unidireccional: true
+
+models.com.naif.domains.models.Cardinalities(Cardinalities_No7):
+    orden:          7
+    name:           Muchos a Muchos Bidireccional No.7
+    cardinality:    "*..*b"
+    unidireccional: false
+
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Relationships(Relationships):
+    orden:         1
+    name:          1..* SystemsModels to Domains
+    optionality:   true
+    from:          SystemsModels
+    to:            Domains
+
+
