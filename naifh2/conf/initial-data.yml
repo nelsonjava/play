@@ -105,14 +105,14 @@ models.com.naif.domains.models.Entities(Models):
 
 # ----------------------------------------------------------
 
-models.com.naif.domains.models.Entities(TiposLinksModels):
+models.com.naif.domains.models.Entities(TiposLinks):
     orden:          1
-    name:           TiposLinksModels
+    name:           TiposLinks
     models:         LINKS MODELS
 
-models.com.naif.domains.models.Entities(LinksModels):
+models.com.naif.domains.models.Entities(Links):
     orden:          2
-    name:           LinksModels
+    name:           Links
     models:         LINKS MODELS
 
 # ----------------------------------------------------------
@@ -377,9 +377,9 @@ models.com.naif.domains.models.Attributes(Models_observaciones):
     typesAttributes: Text
 
 
-# ----------------Attributes:TiposLinksModels-----------------
+# ----------------Attributes:TiposLinks---------------------
 
-models.com.naif.domains.models.Attributes(TiposLinksModels_orden):
+models.com.naif.domains.models.Attributes(TiposLinks_orden):
     orden:           1
     name:            orden
     descripcion:     Orden del registro
@@ -387,10 +387,10 @@ models.com.naif.domains.models.Attributes(TiposLinksModels_orden):
     precision:       0
     nullable:        false
     unico:           false
-    entities:        TiposLinksModels
+    entities:        TiposLinks
     typesAttributes: Float
 
-models.com.naif.domains.models.Attributes(TiposLinksModels_name):
+models.com.naif.domains.models.Attributes(TiposLinks_name):
     orden:           2
     name:            name
     descripcion:     Nombre de la Categoria del enlace
@@ -398,12 +398,12 @@ models.com.naif.domains.models.Attributes(TiposLinksModels_name):
     precision:       0
     nullable:        true
     unico:           false
-    entities:        TiposLinksModels
+    entities:        TiposLinks
     typesAttributes: String
 
 # ----------------Attributes:LinksModels-----------------
 
-models.com.naif.domains.models.Attributes(LinksModels_orden):
+models.com.naif.domains.models.Attributes(Links_orden):
     orden:           1
     name:            orden
     descripcion:     Orden del Registro
@@ -411,10 +411,10 @@ models.com.naif.domains.models.Attributes(LinksModels_orden):
     precision:       0
     nullable:        false
     unico:           false
-    entities:        LinksModels
+    entities:        Links
     typesAttributes: Float
 
-models.com.naif.domains.models.Attributes(LinksModels_titulo):
+models.com.naif.domains.models.Attributes(Links_titulo):
     orden:           2
     name:            titulo
     descripcion:     Titulo del link
@@ -422,10 +422,10 @@ models.com.naif.domains.models.Attributes(LinksModels_titulo):
     precision:       0
     nullable:        true
     unico:           false
-    entities:        LinksModels
+    entities:        Links
     typesAttributes: String
 
-models.com.naif.domains.models.Attributes(LinksModels_link):
+models.com.naif.domains.models.Attributes(Links_link):
     orden:           3
     name:            link
     descripcion:     Link del sitio
@@ -433,10 +433,10 @@ models.com.naif.domains.models.Attributes(LinksModels_link):
     precision:       0
     nullable:        true
     unico:           false
-    entities:        LinksModels
+    entities:        Links
     typesAttributes: String
 
-models.com.naif.domains.models.Attributes(LinksModels_observaciones):
+models.com.naif.domains.models.Attributes(Links_observaciones):
     orden:           4
     name:            observaciones
     descripcion:     Observaciones
@@ -444,7 +444,7 @@ models.com.naif.domains.models.Attributes(LinksModels_observaciones):
     precision:       0
     nullable:        true
     unico:           false
-    entities:        LinksModels
+    entities:        Links
     typesAttributes: Text
 
 # ----------------Attributes:Entities-----------------
@@ -1052,7 +1052,7 @@ models.com.naif.domains.models.Cardinalities(Cardinalities_No4):
 models.com.naif.domains.models.Cardinalities(Cardinalities_No5):
     orden:          5
     name:           Uno a Muchos Bidireccional No.5
-    cardinality:    1..*b
+    cardinality:    1..*
     unidireccional: false
 
 models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
@@ -1064,16 +1064,118 @@ models.com.naif.domains.models.Cardinalities(Cardinalities_No6):
 models.com.naif.domains.models.Cardinalities(Cardinalities_No7):
     orden:          7
     name:           Muchos a Muchos Bidireccional No.7
-    cardinality:    "*..*b"
+    cardinality:    "*..*"
     unidireccional: false
 
 # ----------------------------------------------------------
 
-models.com.naif.domains.models.Relationships(Relationships):
+models.com.naif.domains.models.Relationships(Relationships1):
     orden:         1
-    name:          1..* SystemsModels to Domains
+    name:          1..*:SystemsModels TO Domains
     optionality:   true
     from:          SystemsModels
     to:            Domains
 
+models.com.naif.domains.models.Relationships(Relationships2):
+    orden:         2
+    name:          1..*:Domains TO Models
+    optionality:   true
+    from:          Domains
+    to:            Models
+
+models.com.naif.domains.models.Relationships(Relationships3):
+    orden:         3
+    name:          1..*:Entities TO Entities
+    optionality:   true
+    from:          Entities
+    to:            Entities
+    idTabla1:      objPadre
+    idTabla2:      objHijos
+
+models.com.naif.domains.models.Relationships(Relationships4):
+    orden:         4
+    name:          1..*:Entities TO NameQueries
+    optionality:   true
+    from:          Entities
+    to:            NameQueries
+
+models.com.naif.domains.models.Relationships(Relationships5):
+    orden:         5
+    name:          1..*:Entities TO Attributes
+    optionality:   true
+    from:          Entities
+    to:            Attributes
+
+models.com.naif.domains.models.Relationships(Relationships6):
+    orden:         6
+    name:          1..*:Entities TO Relationships from
+    optionality:   true
+    from:          Entities
+    to:            Relationships
+    idTabla1:      from
+
+models.com.naif.domains.models.Relationships(Relationships7):
+    orden:         7
+    name:          1..*:Entities TO Relationships to
+    optionality:   true
+    from:          Entities
+    to:            Relationships
+    idTabla1:      to
+
+models.com.naif.domains.models.Relationships(Relationships8):
+    orden:         8
+    name:          1..*:Entities TO Attributes
+    optionality:   true
+    from:          Attributes
+    to:            Attributes
+    idTabla1:      objPadre
+    idTabla2:      objHijos
+
+models.com.naif.domains.models.Relationships(Relationships9):
+    orden:         9
+    name:          1..*:TypesAttributes TO Attributes
+    optionality:   true
+    from:          TypesAttributes
+    to:            Attributes
+
+models.com.naif.domains.models.Relationships(Relationships10):
+    orden:         10
+    name:          1..*:PropertiesAttributes TO Attributes
+    optionality:   true
+    from:          PropertiesAttributes
+    to:            Attributes
+
+models.com.naif.domains.models.Relationships(Relationships12):
+    orden:         11
+    name:          1..*:Cardinalities TO Relationships
+    optionality:   true
+    from:          Cardinalities
+    to:            Relationships
+
+models.com.naif.domains.models.Relationships(Relationships13):
+    orden:         12
+    name:          1..*:Models TO Entities
+    optionality:   true
+    from:          Models
+    to:            Entities
+
+models.com.naif.domains.models.Relationships(Relationships14):
+    orden:         13
+    name:          1..*:TiposLinks TO Links
+    optionality:   true
+    from:          TiposLinks
+    to:            Links
+
+#     name:           SystemsModels
+#     name:           Domains
+#     name:           Models
+#     name:           TiposLinks
+#     name:           Links
+#     name:           Entities
+#     name:           NameQueries
+#     name:          PropertiesAttributes
+#     name:          TypesAttributes
+#     name:          Attributes
+#     name:         Cardinalities
+#     name:         Relationships
 

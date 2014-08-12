@@ -38,3 +38,35 @@
 	</tbody>
 </table>
 
+<p>RELATIONS:${entities.name}</p>
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Relations</th>
+	   <th>cardinality</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list entities.from, as:'relfrom'}
+	    <tr>
+	       <td><B>${relfrom.cardinalities.cardinality}</B>:${relfrom.from.name} <B>TO</B> ${relfrom.to.name}</td>
+               <td>${relfrom.cardinalities.name}</td>
+ 	       <td><a href="">Edit</a></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+
+	<tbody>
+	    #{list entities.to, as:'relto'}
+	    <tr>
+	       <td>${relto.to.name} <B>TO</B> ${relto.from.name}</td>
+               <td>${relto.cardinalities.name}</td>
+ 	       <td></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+
+</table>
+

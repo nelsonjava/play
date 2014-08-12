@@ -6,7 +6,7 @@ import javax.persistence.*;
 import play.db.jpa.*;
 
 @Entity
-public class TiposLinksModels extends Model {
+public class TiposLinks extends Model {
 
     public String name;
     public Float orden;

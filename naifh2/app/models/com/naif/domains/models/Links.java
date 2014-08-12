@@ -6,17 +6,19 @@ import javax.persistence.*;
 import play.db.jpa.*;
 
 @Entity
-public class Cardinalities extends Model {
+public class Links extends Model {
 
-    public String name;
-    public String cardinality;
-    public boolean unidireccional;
+    public String titulo;
+    public String link;
     public String observaciones;
     public Float orden;
 
-    public String toString() {
-        return name;
-    }
+    // Muchos a Uno Unidireccional No.3:TiposLinksModels
+    @ManyToOne
+    public TiposLinks tiposLinks;
 
+    public String toString() {
+        return titulo;
+    }
 
 } // Fin de la clase

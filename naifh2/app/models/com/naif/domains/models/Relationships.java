@@ -36,10 +36,6 @@ public class Relationships extends Model {
     @ManyToOne
     public Entities to;
 
-    // Muchos a Uno Unidireccional No.3:LinksModels
-    @ManyToOne
-    public LinksModels linksModels;
-
     public String toString() {
         return name;
     }

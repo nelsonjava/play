@@ -34,10 +34,6 @@ public class Attributes extends Model {
     @ManyToOne
     public PropertiesAttributes propertiesAttributes;
 
-    // Muchos a Uno Unidireccional No.3:LinksModels
-    @ManyToOne
-    public LinksModels linksModels;
-
     // Muchos a Uno Unidireccional No.3:TypesAttributes
     @ManyToOne
     public TypesAttributes typesAttributes;
