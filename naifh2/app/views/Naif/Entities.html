@@ -26,3 +26,26 @@
 	</tbody>
 </table>
 
+<p>RELATIONS</p>
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Relations</th>
+	   <th>cardinality</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	    #{list models.entities, as:'entity'}
+	       #{list entity.from, as:'relation'}
+	           <tr>
+	             <td><B>${relation.cardinalities.cardinality}</B>:${relation.from.name} <B>TO</B> ${relation.to.name}</td>
+                     <td>${relation.cardinalities.name}</td>
+ 	             <td><a href="">Edit</a></td>
+   	           </tr>
+   	       #{/list}
+	    #{/list}
+	</tbody>
+
+</table>

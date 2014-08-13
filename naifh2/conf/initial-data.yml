@@ -1085,6 +1085,13 @@ models.com.naif.domains.models.Relationships(Relationships2):
 
 models.com.naif.domains.models.Relationships(Relationships3):
     orden:         3
+    name:          1..*:Models TO Entities
+    optionality:   true
+    from:          Models
+    to:            Entities
+
+models.com.naif.domains.models.Relationships(Relationships4):
+    orden:         4
     name:          1..*:Entities TO Entities
     optionality:   true
     from:          Entities
@@ -1092,38 +1099,38 @@ models.com.naif.domains.models.Relationships(Relationships3):
     idTabla1:      objPadre
     idTabla2:      objHijos
 
-models.com.naif.domains.models.Relationships(Relationships4):
-    orden:         4
+models.com.naif.domains.models.Relationships(Relationships5):
+    orden:         5
     name:          1..*:Entities TO NameQueries
     optionality:   true
     from:          Entities
     to:            NameQueries
 
-models.com.naif.domains.models.Relationships(Relationships5):
-    orden:         5
+models.com.naif.domains.models.Relationships(Relationships6):
+    orden:         6
     name:          1..*:Entities TO Attributes
     optionality:   true
     from:          Entities
     to:            Attributes
 
-models.com.naif.domains.models.Relationships(Relationships6):
-    orden:         6
+models.com.naif.domains.models.Relationships(Relationships7):
+    orden:         7
     name:          1..*:Entities TO Relationships from
     optionality:   true
     from:          Entities
     to:            Relationships
     idTabla1:      from
 
-models.com.naif.domains.models.Relationships(Relationships7):
-    orden:         7
+models.com.naif.domains.models.Relationships(Relationships8):
+    orden:         8
     name:          1..*:Entities TO Relationships to
     optionality:   true
     from:          Entities
     to:            Relationships
     idTabla1:      to
 
-models.com.naif.domains.models.Relationships(Relationships8):
-    orden:         8
+models.com.naif.domains.models.Relationships(Relationships9):
+    orden:         9
     name:          1..*:Entities TO Attributes
     optionality:   true
     from:          Attributes
@@ -1131,36 +1138,36 @@ models.com.naif.domains.models.Relationships(Relationships8):
     idTabla1:      objPadre
     idTabla2:      objHijos
 
-models.com.naif.domains.models.Relationships(Relationships9):
-    orden:         9
+models.com.naif.domains.models.Relationships(Relationships10):
+    orden:         10
     name:          1..*:TypesAttributes TO Attributes
     optionality:   true
     from:          TypesAttributes
     to:            Attributes
 
-models.com.naif.domains.models.Relationships(Relationships10):
-    orden:         10
+models.com.naif.domains.models.Relationships(Relationships11):
+    orden:         11
     name:          1..*:PropertiesAttributes TO Attributes
     optionality:   true
     from:          PropertiesAttributes
     to:            Attributes
 
 models.com.naif.domains.models.Relationships(Relationships12):
-    orden:         11
+    orden:         12
+    name:          1..*:PropertiesAttributes TO Relationships
+    optionality:   true
+    from:          Relationships
+    to:            Attributes
+
+models.com.naif.domains.models.Relationships(Relationships13):
+    orden:         13
     name:          1..*:Cardinalities TO Relationships
     optionality:   true
     from:          Cardinalities
     to:            Relationships
 
-models.com.naif.domains.models.Relationships(Relationships13):
-    orden:         12
-    name:          1..*:Models TO Entities
-    optionality:   true
-    from:          Models
-    to:            Entities
-
 models.com.naif.domains.models.Relationships(Relationships14):
-    orden:         13
+    orden:         14
     name:          1..*:TiposLinks TO Links
     optionality:   true
     from:          TiposLinks
