@@ -69,36 +69,43 @@ models.com.naif.domains.models.Domains(CARTERA ELEMENTAL):
 models.com.naif.domains.models.Models(SYSTEMS MODELS):
     orden:          1
     name:           SYSTEMS MODELS
+    paquete:        models.com.naif.domains.models
     link:           https://www.dropbox.com/s/2l9zvablc3oypy0/systems_models_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(LINKS MODELS):
     orden:          2
     name:           LINKS MODELS
+    paquete:        models.com.naif.domains.models
     link:           https://www.dropbox.com/s/vkcj35mg8cnprx5/links_models_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(ENTITIES):
     orden:          3
     name:           ENTITIES
+    paquete:        models.com.naif.domains.models
     link:           https://www.dropbox.com/s/6vq400k6hzpc3it/entities_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(ATTRIBUTES):
     orden:          4
     name:           ATTRIBUTES
+    paquete:        models.com.naif.domains.models
     link:           https://www.dropbox.com/s/88nrzsdfz5wwkmg/attributes_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(RELATIONSHIPS):
     orden:          5
     name:           RELATIONSHIPS
+    paquete:        models.com.naif.domains.models
     link:           https://www.dropbox.com/s/zb4jsb11l00lfy4/relationships_rc2.jpg
     domains:        DOMAIN MODELS
 
 models.com.naif.domains.models.Models(RECIBOS):
     orden:          1
     name:           RECIBOS
+    paquete:        models.com.naif.domains.recibos
+    link:           .
     domains:        RECIBOS
 
 # ----------------------------------------------------------
@@ -1045,6 +1052,618 @@ models.com.naif.domains.models.Attributes(Relationships_observaciones):
     entities:        Relationships
     typesAttributes: Text
 
+# ----------------Attributes:Recibos-----------------
+
+models.com.naif.domains.models.Attributes(Recibos_1):
+    orden:           1
+    name:            nIdeCodRfa
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Recibos_2):
+    orden:           2
+    name:            cCodidoEst
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_3):
+    orden:           3
+    name:            nMesIniPag
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: Integer
+
+models.com.naif.domains.models.Attributes(Recibos_4):
+    orden:           4
+    name:            nMesFinPag
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: Integer
+
+models.com.naif.domains.models.Attributes(Recibos_5):
+    orden:           5
+    name:            cNomEmpCon
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_6):
+    orden:           6
+    name:            cNroNitCon
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_7):
+    orden:           7
+    name:            cNroFacCaa
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_8):
+    orden:           8
+    name:            cNomBanRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_9):
+    orden:           9
+    name:            cNroCtaBan
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_10):
+    orden:           10
+    name:            cNombreRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_11):
+    orden:           11
+    name:            cCodRefRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_12):
+    orden:           12
+    name:            cCodigoGru
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_13):
+    orden:           13
+    name:            cFecFacPag
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_14):
+    orden:           14
+    name:            cPagOpoPag
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_15):
+    orden:           15
+    name:            cPagExtPag
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_16):
+    orden:           16
+    name:            cPerFacRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_17):
+    orden:           17
+    name:            cNomCo1Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_18):
+    orden:           18
+    name:            cVlrMo1Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_19):
+    orden:           19
+    name:            cVlrMe1Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_20):
+    orden:           20
+    name:            cVlrTo1Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_21):
+    orden:           21
+    name:            cNomCo2Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_22):
+    orden:           22
+    name:            cVlrMo2Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_23):
+    orden:           23
+    name:            cVlrMe2Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_24):
+    orden:           24
+    name:            cVlrTo2Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_25):
+    orden:           25
+    name:            cNomCo3Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_26):
+    orden:           26
+    name:            cVlrMo3Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_27):
+    orden:           27
+    name:            cVlrMe3Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_28):
+    orden:           28
+    name:            cVlrTo3Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_29):
+    orden:           29
+    name:            cNomCo4Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_30):
+    orden:           30
+    name:            cVlrMo4Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_31):
+    orden:           31
+    name:            cVlrMe4Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_32):
+    orden:           32
+    name:            cVlrTo4Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_33):
+    orden:           33
+    name:            cNomCo5Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_34):
+    orden:           34
+    name:            cVlrMo5Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_35):
+    orden:           35
+    name:            cVlrMe5Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_36):
+    orden:           36
+    name:            cVlrTo5Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_37):
+    orden:           37
+    name:            cNomCo6Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_38):
+    orden:           38
+    name:            cVlrMo6Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_39):
+    orden:           39
+    name:            cVlrMe6Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_40):
+    orden:           40
+    name:            cVlrTo6Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_41):
+    orden:           41
+    name:            cNomCo7Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_42):
+    orden:           42
+    name:            cVlrMo7Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_43):
+    orden:           43
+    name:            cVlrMe7Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_44):
+    orden:           44
+    name:            cVlrTo7Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_45):
+    orden:           45
+    name:            cNomCo8Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_46):
+    orden:           46
+    name:            cVlrMo8Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_47):
+    orden:           47
+    name:            cVlrMe8Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_48):
+    orden:           48
+    name:            cVlrTo8Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_49):
+    orden:           49
+    name:            cNomCo9Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_50):
+    orden:           50
+    name:            cVlrMo9Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_51):
+    orden:           51
+    name:            cVlrMe9Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_52):
+    orden:           52
+    name:            cVlrTo9Rec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_53):
+    orden:           53
+    name:            cVlrOpoRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_54):
+    orden:           54
+    name:            cVlrExtRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_55):
+    orden:           55
+    name:            cBarOpoRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_56):
+    orden:           56
+    name:            cBarExtRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_57):
+    orden:           57
+    name:            cTxtUnoRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_58):
+    orden:           58
+    name:            cTxtDosRec
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_59):
+    orden:           59
+    name:            cNomUsrRfa
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
+models.com.naif.domains.models.Attributes(Recibos_60):
+    orden:           60
+    name:            dFecUsrRfa
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: Date
+
+models.com.naif.domains.models.Attributes(Recibos_61):
+    orden:           61
+    name:            cHorUsrRfa
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Recibos
+    typesAttributes: String
+
 # ----------------------------------------------------------
 
 models.com.naif.domains.models.Cardinalities(Cardinalities_No1):
@@ -1208,202 +1827,3 @@ models.com.naif.domains.models.Relationships(Relationships14):
 #     name:         Cardinalities
 #     name:         Relationships
 
------
-# ----------------Attributes:Recibos-----------------
-
-models.com.naif.domains.models.Attributes(Models_orden):
-    orden:           1
-    name:            orden
-    descripcion:     Orden del Registro
-    length:          0
-    precision:       0
-    nullable:        false
-    unico:           false
-    entities:        Models
-    typesAttributes: Float
-
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            nIdeCodRfa
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cCodidoEst
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            nMesIniPag
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            nMesFinPag
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomEmpCon
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNroNitCon
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNroFacCaa
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomBanRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNroCtaBan
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNombreRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cCodRerRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cCodigoGru
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cFecFacPag
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cPagOpoPag
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cPagExtPag
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cPerFacRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo1Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo1Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe1Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo1Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo2Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo2Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe2Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo2Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo3Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo3Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe3Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo3Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo4Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo4Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe4Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo4Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo5Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo5Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe5Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo5Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo6Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo6Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe6Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo6Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo7Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo7Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe7Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo7Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo8Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo8Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe8Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo8Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomCo9Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMo9Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrMe9Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrTo9Rec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrOpoRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cVlrExtRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cBarOpoRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cBarExtRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cTxtUnoRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cTxtDosRec
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cNomUsrRfa
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            dFecUsrRfa
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1
-    name:            cHorUsrRfa
-models.com.naif.domains.models.Attributes(Recibos_):
-    orden:           1

@@ -34,9 +34,9 @@ public class EntityGen {
        this.frameworks = frameworks;
     }
 
-    public void imports(Frameworks frameworks) {
+    public void imports(Frameworks frameworks, String paquete) {
 
-       javaSource.append("\npackage models.com.naif.domains.models;");
+       javaSource.append("package "+paquete+";");
        javaSource.append("\n");
        javaSource.append("\nimport java.util.*;");
        javaSource.append("\n");
@@ -75,7 +75,14 @@ public class EntityGen {
     public void attributes() {
 
        for (Attributes attributes : entities.attributes) {
-           javaSource.append("\n    "+attributes.typesAttributes.type+" "+attributes.name+";");
+
+           if (frameworks.name.equals("play")) {
+              javaSource.append("\n    "+"public "+attributes.typesAttributes.type+" "+attributes.name+";");
+           }
+           else {
+              javaSource.append("\n    "+"private "+attributes.typesAttributes.type+" "+attributes.name+";");
+           }
+
        }
 
     }
@@ -161,6 +168,8 @@ public class EntityGen {
         } // switch
 
     } // cardinality
+    
+
 
     public void GenDominio() {
 
@@ -168,7 +177,7 @@ public class EntityGen {
 
            for (Entities entities : models.entities) {
                this.entities = entities;
-               GenEjb();
+               GenEjb(models.paquete);
            } // for
 
        } // for
@@ -177,17 +186,22 @@ public class EntityGen {
     } // GenDominio()
 
 
-    public void GenEjb() {
+    public void GenEjb(String paquete) {
 
        javaSource.setLength(0);
 
-       imports(frameworks);
+       imports(frameworks,paquete);
        attributes();
        to();
        from();
 
        javaSource.append("\n");
-       javaSource.append("\n}");
+       javaSource.append("\n    "+"public String toString() {");
+       javaSource.append("\n    "+"    return x;");
+       javaSource.append("\n    "+"}");
+
+       javaSource.append("\n");
+       javaSource.append("\n} // Fin de la clase");
 
        FileTxt filetxt = new FileTxt("c:/models.com.naif.domains."+frameworks.persistence, entities.name+".java", javaSource.toString());
 
