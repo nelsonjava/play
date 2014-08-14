@@ -8,14 +8,16 @@ import play.db.jpa.*;
 @Entity
 public class Models extends Model {
 
+    public Float orden;
     public String name;
     public String paquete;
     public String codigo;
     public String release;
     public Date date;
+    public String link;    
     public String description;
     public String observaciones;
-    public Float orden;
+
 
     // Muchos a Uno Unidireccional No.3:Domains
     @ManyToOne

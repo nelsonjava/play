@@ -20,7 +20,7 @@
 	    <tr>
                <td>${entity.orden}</td>
  	       <td><a href="@{attributes(entity.id)}">${entity.name}</a></td>
- 	       <td><a href="entity/show?id=${entity.id}">Edit</a></td>
+ 	       <td><a href="entity/show?id=${entity.id}" target="_blank">Edit</a></td>
    	    </tr>
 	    #{/list}
 	</tbody>
@@ -42,7 +42,7 @@
 	           <tr>
 	             <td><B>${relation.cardinalities.cardinality}</B>:${relation.from.name} <B>TO</B> ${relation.to.name}</td>
                      <td>${relation.cardinalities.name}</td>
- 	             <td><a href="">Edit</a></td>
+ 	             <td><a href="relationship/show?id=${relation.id}" target="_blank">Edit</a></td>
    	           </tr>
    	       #{/list}
 	    #{/list}

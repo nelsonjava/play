@@ -21,7 +21,10 @@
 	    <tr>
                <td>${model.orden}</td>
  	       <td><a href="@{entities(model.id)}">${model.name}</a></td>
- 	       <td><a href="/model/show?id=${model.id}">Edit</a></td>
+ 	       <td>
+                 <a href="/model/show?id=${model.id}" target="_blank">Edit</a>
+                 <a href="${model.link}" target="_blank">Img</a>
+               </td>
    	    </tr>
 	    #{/list}
 	</tbody>
