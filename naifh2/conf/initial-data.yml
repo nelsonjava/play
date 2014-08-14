@@ -49,6 +49,11 @@ models.com.naif.domains.models.Domains(ISO):
     name:           ISO
     systemsModels:  SIMASOFT
 
+models.com.naif.domains.models.Domains(RECIBOS):
+    orden:          4
+    name:           RECIBOS
+    systemsModels:  SIMASOFT
+
 models.com.naif.domains.models.Domains(CONTABILIDAD BASICA):
     orden:          1
     name:           CONTABILIDAD BASICA
@@ -90,6 +95,11 @@ models.com.naif.domains.models.Models(RELATIONSHIPS):
     name:           RELATIONSHIPS
     link:           https://www.dropbox.com/s/zb4jsb11l00lfy4/relationships_rc2.jpg
     domains:        DOMAIN MODELS
+
+models.com.naif.domains.models.Models(RECIBOS):
+    orden:          1
+    name:           RECIBOS
+    domains:        RECIBOS
 
 # ----------------------------------------------------------
 
@@ -160,6 +170,13 @@ models.com.naif.domains.models.Entities(Relationships):
     orden:        2
     name:         Relationships
     models:       RELATIONSHIPS
+    
+# ----------------------------------------------------------
+
+models.com.naif.domains.models.Entities(Recibos):
+    orden:        1
+    name:         Recibos
+    models:       RECIBOS
 
 # ----------------Attributes:TypesAttributes---------------
 
@@ -1191,3 +1208,202 @@ models.com.naif.domains.models.Relationships(Relationships14):
 #     name:         Cardinalities
 #     name:         Relationships
 
+-----
+# ----------------Attributes:Recibos-----------------
+
+models.com.naif.domains.models.Attributes(Models_orden):
+    orden:           1
+    name:            orden
+    descripcion:     Orden del Registro
+    length:          0
+    precision:       0
+    nullable:        false
+    unico:           false
+    entities:        Models
+    typesAttributes: Float
+
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            nIdeCodRfa
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cCodidoEst
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            nMesIniPag
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            nMesFinPag
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomEmpCon
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNroNitCon
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNroFacCaa
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomBanRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNroCtaBan
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNombreRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cCodRerRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cCodigoGru
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cFecFacPag
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cPagOpoPag
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cPagExtPag
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cPerFacRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo1Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo1Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe1Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo1Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo2Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo2Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe2Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo2Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo3Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo3Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe3Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo3Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo4Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo4Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe4Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo4Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo5Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo5Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe5Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo5Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo6Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo6Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe6Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo6Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo7Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo7Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe7Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo7Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo8Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo8Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe8Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo8Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomCo9Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMo9Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrMe9Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrTo9Rec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrOpoRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cVlrExtRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cBarOpoRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cBarExtRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cTxtUnoRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cTxtDosRec
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cNomUsrRfa
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            dFecUsrRfa
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
+    name:            cHorUsrRfa
+models.com.naif.domains.models.Attributes(Recibos_):
+    orden:           1
