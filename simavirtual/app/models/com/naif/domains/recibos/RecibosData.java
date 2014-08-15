@@ -6,7 +6,7 @@ import javax.persistence.*;
 import play.db.jpa.*;
 
 @Entity
-public class Recibos extends Model {
+public class RecibosData extends Model {
 
     public String cBarOpoRec;
     public String cVlrExtRec;
@@ -69,6 +69,8 @@ public class Recibos extends Model {
     public String cVlrTo8Rec;
     public String cVlrMe8Rec;
     public String cVlrMo8Rec;
+
+    public void RecibosData(){}
 
     public String toString() {
         return cCodRefRec;
