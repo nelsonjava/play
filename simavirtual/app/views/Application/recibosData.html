@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set title:'Models' /}
+
+<p><a href="/">Home</a></p>
+
+<table border="1">
+	<thead>
+	 <tr>
+	   <th>Mes Inicial</th>
+	   <th>Mes Final</th>
+	   <th>Referencia</th>
+	   <th>Grupo</th>
+	   <th>Nombre</th>
+	   <th>Pago Oportuno</th>
+	   <th>Pago Extemporaneo</th>
+	   <th>Action</th>
+	</tr>
+	</thead>
+	<tbody>
+	    #{list recibosData, as:'reciboData'}
+	    <tr>
+               <td>${reciboData.nMesIniPag}</td>
+               <td>${reciboData.nMesIniPag}</td>
+               <td>${reciboData.cCodRefRec}</td>
+               <td>${reciboData.cCodigoGru}</td>
+               <td>${reciboData.cNombreRec}</td>
+               <td>${reciboData.cPagOpoPag} Paguese $ ${reciboData.cVlrOpoRec}</td>
+               <td>${reciboData.cPagExtPag} Paguese $ ${reciboData.cVlrExtRec}</td>               
+ 	       <td><a href="" target="_blank">Recibo</a></td>
+   	    </tr>
+	    #{/list}
+	</tbody>
+</table>
+

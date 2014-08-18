@@ -5,7 +5,7 @@ import play.mvc.*;
 
 import java.util.*;
 
-import models.com.naif.domains.recibos.recibosData;
+import models.com.naif.domains.recibos.RecibosData;
 
 import controllers.com.naif.sima.dbf.simacart.year.recibos.RecibosDbf;
 
@@ -15,15 +15,28 @@ public class Application extends Controller {
         render();
     }
 
-   public void saveRecibos(Recibos recibos, String xCodigo) {
+   public static void recibos() {
 
-        String sfile = "D:/sima/simacart/2014.diu/RECIBOS/JUN/RECIJUN.DAT";
-        RecibosDbf recibosDbf = new RecibosDbf(sfile);
+        if(RecibosData.count() == 0) {
 
-        RecibosData recibosData = new RecibosData();
-        recibosDbf.saveRecibos(recibosData, "CCODIGOEST");
+          String sfile = "D:/sima/simacart/2014.diu/RECIBOS/JUN/RECIJUN.DAT";
+          RecibosDbf recibosDbf = new RecibosDbf(sfile);
+
+          recibosDbf.saveRecibos();
+        } // if
+
         render();
+
     }  // recibos
+
+   public static void recibosData() {
+
+      List<RecibosData> recibosData = RecibosData.find("order by cCodigoGru").fetch();
+      render(recibosData);
+
+   }  // recibos
+
+
 
 }
 

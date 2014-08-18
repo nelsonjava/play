@@ -77,7 +77,7 @@ public class RecibosDbf implements java.io.Serializable {
    private ArrayList<DBFRecord> registros;
    private DBFRecord registro;
 
-   public RECIBOS(String sFile) {
+   public RecibosDbf(String sFile) {
      dbf = new DBFReader().readDBFFile(sFile);
      registros = dbf.getRecords();
    }
@@ -488,29 +488,93 @@ public class RecibosDbf implements java.io.Serializable {
        for (String codigo : codigos) {
             viewRegistro(xCodigo,codigo);
        } // for
+
    } // viewRegistros
 
-   public void saveRecibos(RecibosData recibosdata, String xCodigo) {
+   public void saveRecibos() {
 
        ArrayList<String> codigos = null;
-       codigos = getIds(xCodigo);
+       codigos = getIds("CCODIGOEST");
 
        for (String codigo : codigos) {
-            saveRecibo(recibosdata,xCodigo,codigo);
+
+           seek("CCODIGOEST",codigo);
+
+           RecibosData recibosData = new RecibosData();
+           setRecibo(recibosData);
+           recibosData.save();
+
+           System.out.println("cCodRefRec:"+recibosData.cCodRefRec);
+           System.out.println();
+
        } // for
+
    } // saveRecibos
 
-   public void saveRecibo(Recibos recibos String xCodigo,String cCodigo) {
+   public void setRecibo(RecibosData recibos) {
 
-       seek(xCodigo,cCodigo);
-
-       System.out.println("-----------------------Detalle-de Registro-----------------------");
-
-       recibos.cCodRefRec = getCCODREFREC();
+//       recibos.nIdeCodRfa = getNIDECODRFA();
+       recibos.nMesIniPag = getNMESINIPAG();
+       recibos.nMesFinPag = getNMESFINPAG();
+       recibos.cNomEmpCon = getCNOMEMPCON();
+       recibos.cNroNitCon = getCNRONITCON();
+       recibos.cNroFacCaa = getCNROFACCAA();
+       recibos.cNomBanRec = getCNOMBANREC();
+       recibos.cNroCtaBan = getCNROCTABAN();
        recibos.cNombreRec = getCNOMBREREC();
-       System.out.println("CCODREFREC:"+getCCODREFREC());
+       recibos.cCodRefRec = getCCODREFREC();
+       recibos.cCodigoGru = getCCODIGOGRU();
+       recibos.cFecFacPag = getCFECFACPAG();
+       recibos.cPagOpoPag = getCPAGOPOPAG();
+       recibos.cPagExtPag = getCPAGEXTPAG();
+       recibos.cPerFacRec = getCPERFACREC();
+       recibos.cNomCo1Rec = getCNOMCO1REC();
+       recibos.cVlrMo1Rec = getCVLRMO1REC();
+       recibos.cVlrMe1Rec = getCVLRME1REC();
+       recibos.cVlrTo1Rec = getCVLRTO1REC();
+       recibos.cNomCo2Rec = getCNOMCO2REC();
+       recibos.cVlrMo2Rec = getCVLRMO2REC();
+       recibos.cVlrMe2Rec = getCVLRME2REC();
+       recibos.cVlrTo2Rec = getCVLRTO2REC();
+       recibos.cNomCo3Rec = getCNOMCO3REC();
+       recibos.cVlrMo3Rec = getCVLRMO3REC();
+       recibos.cVlrMe3Rec = getCVLRME3REC();
+       recibos.cVlrTo3Rec = getCVLRTO3REC();
+       recibos.cNomCo4Rec = getCNOMCO4REC();
+       recibos.cVlrMo4Rec = getCVLRMO4REC();
+       recibos.cVlrMe4Rec = getCVLRME4REC();
+       recibos.cVlrTo4Rec = getCVLRTO4REC();
+       recibos.cNomCo5Rec = getCNOMCO5REC();
+       recibos.cVlrMo5Rec = getCVLRMO5REC();
+       recibos.cVlrMe5Rec = getCVLRME5REC();
+       recibos.cVlrTo5Rec = getCVLRTO5REC();
+       recibos.cNomCo6Rec = getCNOMCO6REC();
+       recibos.cVlrMo6Rec = getCVLRMO6REC();
+       recibos.cVlrMe6Rec = getCVLRME6REC();
+       recibos.cVlrTo6Rec = getCVLRTO6REC();
+       recibos.cNomCo7Rec = getCNOMCO7REC();
+       recibos.cVlrMo7Rec = getCVLRMO7REC();
+       recibos.cVlrMe7Rec = getCVLRME7REC();
+       recibos.cVlrTo7Rec = getCVLRTO7REC();
+       recibos.cNomCo8Rec = getCNOMCO8REC();
+       recibos.cVlrMo8Rec = getCVLRMO8REC();
+       recibos.cVlrMe8Rec = getCVLRME8REC();
+       recibos.cVlrTo8Rec = getCVLRTO8REC();
+       recibos.cNomCo9Rec = getCNOMCO9REC();
+       recibos.cVlrMo9Rec = getCVLRMO9REC();
+       recibos.cVlrMe9Rec = getCVLRME9REC();
+       recibos.cVlrTo9Rec = getCVLRTO9REC();
+       recibos.cVlrOpoRec = getCVLROPOREC();
+       recibos.cVlrExtRec = getCVLREXTREC();
+       recibos.cBarOpoRec = getCBAROPOREC();
+       recibos.cBarExtRec = getCBAREXTREC();
+       recibos.cTxtUnoRec = getCTXTUNOREC();
+       recibos.cTxtDosRec = getCTXTDOSREC();
+       recibos.cNomUsrRfa = getCNOMUSRRFA();
+       recibos.dFecUsrRfa = getDFECUSRRFA();
+       recibos.cHorUsrRfa = getCHORUSRRFA();
 
-       System.out.println();
+
    } // saveRecibo
 
 

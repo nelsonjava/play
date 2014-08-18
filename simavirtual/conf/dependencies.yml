@@ -1,4 +1,7 @@
 # Application dependencies
+# play dependencies
+# play deps --sync
 
 require:
     - play
+    - crud    
