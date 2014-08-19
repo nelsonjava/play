@@ -85,7 +85,7 @@ public class Naif extends Application {
         Entities entities = Entities.findById(id);
 
         EntityGen entityGen = new EntityGen(entities);
-        entityGen.GenEjb();
+        entityGen.GenEjb(entities.models.paquete);
 
         render(entities);
 
