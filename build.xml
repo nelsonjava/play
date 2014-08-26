@@ -20,8 +20,11 @@
   </target>
 
   <target name="del" description="Initialize the build">
+    <delete dir="naifh2/tmp" failonerror="no"/>
     <delete dir="recibos/tmp" failonerror="no"/>
-    <delete dir="simatool/tmp" failonerror="no"/>
+    <delete dir="simatoolh2/tmp" failonerror="no"/>
+    <delete dir="simatoolmg/tmp" failonerror="no"/>
+    <delete dir="simavirtual/tmp" failonerror="no"/>
   </target>
 
 </project>
